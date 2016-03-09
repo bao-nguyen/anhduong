@@ -9,11 +9,11 @@
 SET sql_mode = '';
 
 --
--- Table structure for table `oc_address`
+-- Table structure for table `bcit_address`
 --
 
-DROP TABLE IF EXISTS `oc_address`;
-CREATE TABLE `oc_address` (
+DROP TABLE IF EXISTS `bcit_address`;
+CREATE TABLE `bcit_address` (
   `address_id` int(11) NOT NULL AUTO_INCREMENT,
   `customer_id` int(11) NOT NULL,
   `firstname` varchar(32) NOT NULL,
@@ -33,11 +33,11 @@ CREATE TABLE `oc_address` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_affiliate`
+-- Table structure for table `bcit_affiliate`
 --
 
-DROP TABLE IF EXISTS `oc_affiliate`;
-CREATE TABLE `oc_affiliate` (
+DROP TABLE IF EXISTS `bcit_affiliate`;
+CREATE TABLE `bcit_affiliate` (
   `affiliate_id` int(11) NOT NULL AUTO_INCREMENT,
   `firstname` varchar(32) NOT NULL,
   `lastname` varchar(32) NOT NULL,
@@ -75,11 +75,11 @@ CREATE TABLE `oc_affiliate` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_affiliate_activity`
+-- Table structure for table `bcit_affiliate_activity`
 --
 
-DROP TABLE IF EXISTS `oc_affiliate_activity`;
-CREATE TABLE `oc_affiliate_activity` (
+DROP TABLE IF EXISTS `bcit_affiliate_activity`;
+CREATE TABLE `bcit_affiliate_activity` (
   `activity_id` int(11) NOT NULL AUTO_INCREMENT,
   `affiliate_id` int(11) NOT NULL,
   `key` varchar(64) NOT NULL,
@@ -92,11 +92,11 @@ CREATE TABLE `oc_affiliate_activity` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_affiliate_login`
+-- Table structure for table `bcit_affiliate_login`
 --
 
-DROP TABLE IF EXISTS `oc_affiliate_login`;
-CREATE TABLE `oc_affiliate_login` (
+DROP TABLE IF EXISTS `bcit_affiliate_login`;
+CREATE TABLE `bcit_affiliate_login` (
   `affiliate_login_id` int(11) NOT NULL AUTO_INCREMENT,
   `email` varchar(96) NOT NULL,
   `ip` varchar(40) NOT NULL,
@@ -111,11 +111,11 @@ CREATE TABLE `oc_affiliate_login` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_affiliate_transaction`
+-- Table structure for table `bcit_affiliate_transaction`
 --
 
-DROP TABLE IF EXISTS `oc_affiliate_transaction`;
-CREATE TABLE `oc_affiliate_transaction` (
+DROP TABLE IF EXISTS `bcit_affiliate_transaction`;
+CREATE TABLE `bcit_affiliate_transaction` (
   `affiliate_transaction_id` int(11) NOT NULL AUTO_INCREMENT,
   `affiliate_id` int(11) NOT NULL,
   `order_id` int(11) NOT NULL,
@@ -128,11 +128,11 @@ CREATE TABLE `oc_affiliate_transaction` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_api`
+-- Table structure for table `bcit_api`
 --
 
-DROP TABLE IF EXISTS `oc_api`;
-CREATE TABLE `oc_api` (
+DROP TABLE IF EXISTS `bcit_api`;
+CREATE TABLE `bcit_api` (
   `api_id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(64) NOT NULL,
   `key` text NOT NULL,
@@ -145,11 +145,11 @@ CREATE TABLE `oc_api` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_api_ip`
+-- Table structure for table `bcit_api_ip`
 --
 
-DROP TABLE IF EXISTS `oc_api_ip`;
-CREATE TABLE `oc_api_ip` (
+DROP TABLE IF EXISTS `bcit_api_ip`;
+CREATE TABLE `bcit_api_ip` (
   `api_ip_id` int(11) NOT NULL AUTO_INCREMENT,
   `api_id` int(11) NOT NULL,
   `ip` varchar(40) NOT NULL,
@@ -159,11 +159,11 @@ CREATE TABLE `oc_api_ip` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_api_session`
+-- Table structure for table `bcit_api_session`
 --
 
-DROP TABLE IF EXISTS `oc_api_session`;
-CREATE TABLE `oc_api_session` (
+DROP TABLE IF EXISTS `bcit_api_session`;
+CREATE TABLE `bcit_api_session` (
   `api_session_id` int(11) NOT NULL AUTO_INCREMENT,
   `api_id` int(11) NOT NULL,
   `token` varchar(32) NOT NULL,
@@ -178,11 +178,11 @@ CREATE TABLE `oc_api_session` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_attribute`
+-- Table structure for table `bcit_attribute`
 --
 
-DROP TABLE IF EXISTS `oc_attribute`;
-CREATE TABLE `oc_attribute` (
+DROP TABLE IF EXISTS `bcit_attribute`;
+CREATE TABLE `bcit_attribute` (
   `attribute_id` int(11) NOT NULL AUTO_INCREMENT,
   `attribute_group_id` int(11) NOT NULL,
   `sort_order` int(3) NOT NULL,
@@ -192,11 +192,11 @@ CREATE TABLE `oc_attribute` (
 
 
 --
--- Table structure for table `oc_attribute_description`
+-- Table structure for table `bcit_attribute_description`
 --
 
-DROP TABLE IF EXISTS `oc_attribute_description`;
-CREATE TABLE `oc_attribute_description` (
+DROP TABLE IF EXISTS `bcit_attribute_description`;
+CREATE TABLE `bcit_attribute_description` (
   `attribute_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
   `name` varchar(64) NOT NULL,
@@ -205,27 +205,27 @@ CREATE TABLE `oc_attribute_description` (
 
 
 --
--- Table structure for table `oc_attribute_group`
+-- Table structure for table `bcit_attribute_group`
 --
 
-DROP TABLE IF EXISTS `oc_attribute_group`;
-CREATE TABLE `oc_attribute_group` (
+DROP TABLE IF EXISTS `bcit_attribute_group`;
+CREATE TABLE `bcit_attribute_group` (
   `attribute_group_id` int(11) NOT NULL AUTO_INCREMENT,
   `sort_order` int(3) NOT NULL,
   PRIMARY KEY (`attribute_group_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `oc_attribute_group`
+-- Dumping data for table `bcit_attribute_group`
 --
 
 
 --
--- Table structure for table `oc_attribute_group_description`
+-- Table structure for table `bcit_attribute_group_description`
 --
 
-DROP TABLE IF EXISTS `oc_attribute_group_description`;
-CREATE TABLE `oc_attribute_group_description` (
+DROP TABLE IF EXISTS `bcit_attribute_group_description`;
+CREATE TABLE `bcit_attribute_group_description` (
   `attribute_group_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
   `name` varchar(64) NOT NULL,
@@ -234,11 +234,11 @@ CREATE TABLE `oc_attribute_group_description` (
 
 
 --
--- Table structure for table `oc_banner`
+-- Table structure for table `bcit_banner`
 --
 
-DROP TABLE IF EXISTS `oc_banner`;
-CREATE TABLE `oc_banner` (
+DROP TABLE IF EXISTS `bcit_banner`;
+CREATE TABLE `bcit_banner` (
   `banner_id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(64) NOT NULL,
   `status` tinyint(1) NOT NULL,
@@ -246,11 +246,11 @@ CREATE TABLE `oc_banner` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Table structure for table `oc_banner_image`
+-- Table structure for table `bcit_banner_image`
 --
 
-DROP TABLE IF EXISTS `oc_banner_image`;
-CREATE TABLE `oc_banner_image` (
+DROP TABLE IF EXISTS `bcit_banner_image`;
+CREATE TABLE `bcit_banner_image` (
   `banner_image_id` int(11) NOT NULL AUTO_INCREMENT,
   `banner_id` int(11) NOT NULL,
   `link` varchar(255) NOT NULL,
@@ -261,11 +261,11 @@ CREATE TABLE `oc_banner_image` (
 
 
 --
--- Table structure for table `oc_banner_image_description`
+-- Table structure for table `bcit_banner_image_description`
 --
 
-DROP TABLE IF EXISTS `oc_banner_image_description`;
-CREATE TABLE `oc_banner_image_description` (
+DROP TABLE IF EXISTS `bcit_banner_image_description`;
+CREATE TABLE `bcit_banner_image_description` (
   `banner_image_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
   `banner_id` int(11) NOT NULL,
@@ -276,11 +276,11 @@ CREATE TABLE `oc_banner_image_description` (
 
 
 --
--- Table structure for table `oc_cart`
+-- Table structure for table `bcit_cart`
 --
 
-DROP TABLE IF EXISTS `oc_cart`;
-CREATE TABLE `oc_cart` (
+DROP TABLE IF EXISTS `bcit_cart`;
+CREATE TABLE `bcit_cart` (
   `cart_id` int(11) NOT NULL AUTO_INCREMENT,
   `customer_id` int(11) NOT NULL,
   `session_id` varchar(32) NOT NULL,
@@ -296,11 +296,11 @@ CREATE TABLE `oc_cart` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_category`
+-- Table structure for table `bcit_category`
 --
 
-DROP TABLE IF EXISTS `oc_category`;
-CREATE TABLE `oc_category` (
+DROP TABLE IF EXISTS `bcit_category`;
+CREATE TABLE `bcit_category` (
   `category_id` int(11) NOT NULL AUTO_INCREMENT,
   `image` varchar(255) DEFAULT NULL,
   `parent_id` int(11) NOT NULL DEFAULT '0',
@@ -316,11 +316,11 @@ CREATE TABLE `oc_category` (
 
 
 --
--- Table structure for table `oc_category_description`
+-- Table structure for table `bcit_category_description`
 --
 
-DROP TABLE IF EXISTS `oc_category_description`;
-CREATE TABLE `oc_category_description` (
+DROP TABLE IF EXISTS `bcit_category_description`;
+CREATE TABLE `bcit_category_description` (
   `category_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
@@ -335,11 +335,11 @@ CREATE TABLE `oc_category_description` (
 
 
 --
--- Table structure for table `oc_category_filter`
+-- Table structure for table `bcit_category_filter`
 --
 
-DROP TABLE IF EXISTS `oc_category_filter`;
-CREATE TABLE `oc_category_filter` (
+DROP TABLE IF EXISTS `bcit_category_filter`;
+CREATE TABLE `bcit_category_filter` (
   `category_id` int(11) NOT NULL,
   `filter_id` int(11) NOT NULL,
   PRIMARY KEY (`category_id`,`filter_id`)
@@ -348,11 +348,11 @@ CREATE TABLE `oc_category_filter` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_category_path`
+-- Table structure for table `bcit_category_path`
 --
 
-DROP TABLE IF EXISTS `oc_category_path`;
-CREATE TABLE `oc_category_path` (
+DROP TABLE IF EXISTS `bcit_category_path`;
+CREATE TABLE `bcit_category_path` (
   `category_id` int(11) NOT NULL,
   `path_id` int(11) NOT NULL,
   `level` int(11) NOT NULL,
@@ -362,11 +362,11 @@ CREATE TABLE `oc_category_path` (
 
 
 --
--- Table structure for table `oc_category_to_layout`
+-- Table structure for table `bcit_category_to_layout`
 --
 
-DROP TABLE IF EXISTS `oc_category_to_layout`;
-CREATE TABLE `oc_category_to_layout` (
+DROP TABLE IF EXISTS `bcit_category_to_layout`;
+CREATE TABLE `bcit_category_to_layout` (
   `category_id` int(11) NOT NULL,
   `store_id` int(11) NOT NULL,
   `layout_id` int(11) NOT NULL,
@@ -376,11 +376,11 @@ CREATE TABLE `oc_category_to_layout` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_category_to_store`
+-- Table structure for table `bcit_category_to_store`
 --
 
-DROP TABLE IF EXISTS `oc_category_to_store`;
-CREATE TABLE `oc_category_to_store` (
+DROP TABLE IF EXISTS `bcit_category_to_store`;
+CREATE TABLE `bcit_category_to_store` (
   `category_id` int(11) NOT NULL,
   `store_id` int(11) NOT NULL,
   PRIMARY KEY (`category_id`,`store_id`)
@@ -389,11 +389,11 @@ CREATE TABLE `oc_category_to_store` (
 
 
 --
--- Table structure for table `oc_country`
+-- Table structure for table `bcit_country`
 --
 
-DROP TABLE IF EXISTS `oc_country`;
-CREATE TABLE `oc_country` (
+DROP TABLE IF EXISTS `bcit_country`;
+CREATE TABLE `bcit_country` (
   `country_id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(128) NOT NULL,
   `iso_code_2` varchar(2) NOT NULL,
@@ -405,10 +405,10 @@ CREATE TABLE `oc_country` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `oc_country`
+-- Dumping data for table `bcit_country`
 --
 
-INSERT INTO `oc_country` (`country_id`, `name`, `iso_code_2`, `iso_code_3`, `address_format`, `postcode_required`, `status`) VALUES
+INSERT INTO `bcit_country` (`country_id`, `name`, `iso_code_2`, `iso_code_3`, `address_format`, `postcode_required`, `status`) VALUES
 (1, 'Afghanistan', 'AF', 'AFG', '', 0, 1),
 (2, 'Albania', 'AL', 'ALB', '', 0, 1),
 (3, 'Algeria', 'DZ', 'DZA', '', 0, 1),
@@ -666,11 +666,11 @@ INSERT INTO `oc_country` (`country_id`, `name`, `iso_code_2`, `iso_code_3`, `add
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_coupon`
+-- Table structure for table `bcit_coupon`
 --
 
-DROP TABLE IF EXISTS `oc_coupon`;
-CREATE TABLE `oc_coupon` (
+DROP TABLE IF EXISTS `bcit_coupon`;
+CREATE TABLE `bcit_coupon` (
   `coupon_id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(128) NOT NULL,
   `code` varchar(10) NOT NULL,
@@ -690,11 +690,11 @@ CREATE TABLE `oc_coupon` (
 
 
 --
--- Table structure for table `oc_coupon_category`
+-- Table structure for table `bcit_coupon_category`
 --
 
-DROP TABLE IF EXISTS `oc_coupon_category`;
-CREATE TABLE `oc_coupon_category` (
+DROP TABLE IF EXISTS `bcit_coupon_category`;
+CREATE TABLE `bcit_coupon_category` (
   `coupon_id` int(11) NOT NULL,
   `category_id` int(11) NOT NULL,
   PRIMARY KEY (`coupon_id`,`category_id`)
@@ -703,11 +703,11 @@ CREATE TABLE `oc_coupon_category` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_coupon_history`
+-- Table structure for table `bcit_coupon_history`
 --
 
-DROP TABLE IF EXISTS `oc_coupon_history`;
-CREATE TABLE `oc_coupon_history` (
+DROP TABLE IF EXISTS `bcit_coupon_history`;
+CREATE TABLE `bcit_coupon_history` (
   `coupon_history_id` int(11) NOT NULL AUTO_INCREMENT,
   `coupon_id` int(11) NOT NULL,
   `order_id` int(11) NOT NULL,
@@ -720,11 +720,11 @@ CREATE TABLE `oc_coupon_history` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_coupon_product`
+-- Table structure for table `bcit_coupon_product`
 --
 
-DROP TABLE IF EXISTS `oc_coupon_product`;
-CREATE TABLE `oc_coupon_product` (
+DROP TABLE IF EXISTS `bcit_coupon_product`;
+CREATE TABLE `bcit_coupon_product` (
   `coupon_product_id` int(11) NOT NULL AUTO_INCREMENT,
   `coupon_id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
@@ -734,11 +734,11 @@ CREATE TABLE `oc_coupon_product` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_currency`
+-- Table structure for table `bcit_currency`
 --
 
-DROP TABLE IF EXISTS `oc_currency`;
-CREATE TABLE `oc_currency` (
+DROP TABLE IF EXISTS `bcit_currency`;
+CREATE TABLE `bcit_currency` (
   `currency_id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(32) NOT NULL,
   `code` varchar(3) NOT NULL,
@@ -752,10 +752,10 @@ CREATE TABLE `oc_currency` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `oc_currency`
+-- Dumping data for table `bcit_currency`
 --
 
-INSERT INTO `oc_currency` (`currency_id`, `title`, `code`, `symbol_left`, `symbol_right`, `decimal_place`, `value`, `status`, `date_modified`) VALUES
+INSERT INTO `bcit_currency` (`currency_id`, `title`, `code`, `symbol_left`, `symbol_right`, `decimal_place`, `value`, `status`, `date_modified`) VALUES
 (1, 'Pound Sterling', 'GBP', '£', '', '2', 0.61250001, 1, '2014-09-25 14:40:00'),
 (2, 'US Dollar', 'USD', '$', '', '2', 1.00000000, 1, '2014-09-25 14:40:00'),
 (3, 'Euro', 'EUR', '', '€', '2', 0.78460002, 1, '2014-09-25 14:40:00');
@@ -763,11 +763,11 @@ INSERT INTO `oc_currency` (`currency_id`, `title`, `code`, `symbol_left`, `symbo
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_customer`
+-- Table structure for table `bcit_customer`
 --
 
-DROP TABLE IF EXISTS `oc_customer`;
-CREATE TABLE `oc_customer` (
+DROP TABLE IF EXISTS `bcit_customer`;
+CREATE TABLE `bcit_customer` (
   `customer_id` int(11) NOT NULL AUTO_INCREMENT,
   `customer_group_id` int(11) NOT NULL,
   `store_id` int(11) NOT NULL DEFAULT '0',
@@ -795,11 +795,11 @@ CREATE TABLE `oc_customer` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_customer_activity`
+-- Table structure for table `bcit_customer_activity`
 --
 
-DROP TABLE IF EXISTS `oc_customer_activity`;
-CREATE TABLE `oc_customer_activity` (
+DROP TABLE IF EXISTS `bcit_customer_activity`;
+CREATE TABLE `bcit_customer_activity` (
   `activity_id` int(11) NOT NULL AUTO_INCREMENT,
   `customer_id` int(11) NOT NULL,
   `key` varchar(64) NOT NULL,
@@ -812,11 +812,11 @@ CREATE TABLE `oc_customer_activity` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_customer_group`
+-- Table structure for table `bcit_customer_group`
 --
 
-DROP TABLE IF EXISTS `oc_customer_group`;
-CREATE TABLE `oc_customer_group` (
+DROP TABLE IF EXISTS `bcit_customer_group`;
+CREATE TABLE `bcit_customer_group` (
   `customer_group_id` int(11) NOT NULL AUTO_INCREMENT,
   `approval` int(1) NOT NULL,
   `sort_order` int(3) NOT NULL,
@@ -824,20 +824,20 @@ CREATE TABLE `oc_customer_group` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `oc_customer_group`
+-- Dumping data for table `bcit_customer_group`
 --
 
-INSERT INTO `oc_customer_group` (`customer_group_id`, `approval`, `sort_order`) VALUES
+INSERT INTO `bcit_customer_group` (`customer_group_id`, `approval`, `sort_order`) VALUES
 (1, 0, 1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_customer_group_description`
+-- Table structure for table `bcit_customer_group_description`
 --
 
-DROP TABLE IF EXISTS `oc_customer_group_description`;
-CREATE TABLE `oc_customer_group_description` (
+DROP TABLE IF EXISTS `bcit_customer_group_description`;
+CREATE TABLE `bcit_customer_group_description` (
   `customer_group_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
   `name` varchar(32) NOT NULL,
@@ -846,20 +846,20 @@ CREATE TABLE `oc_customer_group_description` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `oc_customer_group_description`
+-- Dumping data for table `bcit_customer_group_description`
 --
 
-INSERT INTO `oc_customer_group_description` (`customer_group_id`, `language_id`, `name`, `description`) VALUES
+INSERT INTO `bcit_customer_group_description` (`customer_group_id`, `language_id`, `name`, `description`) VALUES
 (1, 1, 'Default', 'test');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_customer_history`
+-- Table structure for table `bcit_customer_history`
 --
 
-DROP TABLE IF EXISTS `oc_customer_history`;
-CREATE TABLE `oc_customer_history` (
+DROP TABLE IF EXISTS `bcit_customer_history`;
+CREATE TABLE `bcit_customer_history` (
   `customer_history_id` int(11) NOT NULL AUTO_INCREMENT,
   `customer_id` int(11) NOT NULL,
   `comment` text NOT NULL,
@@ -870,11 +870,11 @@ CREATE TABLE `oc_customer_history` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_customer_login`
+-- Table structure for table `bcit_customer_login`
 --
 
-DROP TABLE IF EXISTS `oc_customer_login`;
-CREATE TABLE `oc_customer_login` (
+DROP TABLE IF EXISTS `bcit_customer_login`;
+CREATE TABLE `bcit_customer_login` (
   `customer_login_id` int(11) NOT NULL AUTO_INCREMENT,
   `email` varchar(96) NOT NULL,
   `ip` varchar(40) NOT NULL,
@@ -889,11 +889,11 @@ CREATE TABLE `oc_customer_login` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_customer_ip`
+-- Table structure for table `bcit_customer_ip`
 --
 
-DROP TABLE IF EXISTS `oc_customer_ip`;
-CREATE TABLE `oc_customer_ip` (
+DROP TABLE IF EXISTS `bcit_customer_ip`;
+CREATE TABLE `bcit_customer_ip` (
   `customer_ip_id` int(11) NOT NULL AUTO_INCREMENT,
   `customer_id` int(11) NOT NULL,
   `ip` varchar(40) NOT NULL,
@@ -905,11 +905,11 @@ CREATE TABLE `oc_customer_ip` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_customer_online`
+-- Table structure for table `bcit_customer_online`
 --
 
-DROP TABLE IF EXISTS `oc_customer_online`;
-CREATE TABLE `oc_customer_online` (
+DROP TABLE IF EXISTS `bcit_customer_online`;
+CREATE TABLE `bcit_customer_online` (
   `ip` varchar(40) NOT NULL,
   `customer_id` int(11) NOT NULL,
   `url` text NOT NULL,
@@ -921,11 +921,11 @@ CREATE TABLE `oc_customer_online` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_customer_reward`
+-- Table structure for table `bcit_customer_reward`
 --
 
-DROP TABLE IF EXISTS `oc_customer_reward`;
-CREATE TABLE `oc_customer_reward` (
+DROP TABLE IF EXISTS `bcit_customer_reward`;
+CREATE TABLE `bcit_customer_reward` (
   `customer_reward_id` int(11) NOT NULL AUTO_INCREMENT,
   `customer_id` int(11) NOT NULL DEFAULT '0',
   `order_id` int(11) NOT NULL DEFAULT '0',
@@ -938,11 +938,11 @@ CREATE TABLE `oc_customer_reward` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_customer_transaction`
+-- Table structure for table `bcit_customer_transaction`
 --
 
-DROP TABLE IF EXISTS `oc_customer_transaction`;
-CREATE TABLE `oc_customer_transaction` (
+DROP TABLE IF EXISTS `bcit_customer_transaction`;
+CREATE TABLE `bcit_customer_transaction` (
   `customer_transaction_id` int(11) NOT NULL AUTO_INCREMENT,
   `customer_id` int(11) NOT NULL,
   `order_id` int(11) NOT NULL,
@@ -955,11 +955,11 @@ CREATE TABLE `oc_customer_transaction` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_customer_wishlist`
+-- Table structure for table `bcit_customer_wishlist`
 --
 
-DROP TABLE IF EXISTS `oc_customer_wishlist`;
-CREATE TABLE `oc_customer_wishlist` (
+DROP TABLE IF EXISTS `bcit_customer_wishlist`;
+CREATE TABLE `bcit_customer_wishlist` (
   `customer_id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
   `date_added` datetime NOT NULL,
@@ -969,11 +969,11 @@ CREATE TABLE `oc_customer_wishlist` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_custom_field`
+-- Table structure for table `bcit_custom_field`
 --
 
-DROP TABLE IF EXISTS `oc_custom_field`;
-CREATE TABLE `oc_custom_field` (
+DROP TABLE IF EXISTS `bcit_custom_field`;
+CREATE TABLE `bcit_custom_field` (
   `custom_field_id` int(11) NOT NULL AUTO_INCREMENT,
   `type` varchar(32) NOT NULL,
   `value` text NOT NULL,
@@ -986,11 +986,11 @@ CREATE TABLE `oc_custom_field` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_custom_field_customer_group`
+-- Table structure for table `bcit_custom_field_customer_group`
 --
 
-DROP TABLE IF EXISTS `oc_custom_field_customer_group`;
-CREATE TABLE `oc_custom_field_customer_group` (
+DROP TABLE IF EXISTS `bcit_custom_field_customer_group`;
+CREATE TABLE `bcit_custom_field_customer_group` (
   `custom_field_id` int(11) NOT NULL,
   `customer_group_id` int(11) NOT NULL,
   `required` tinyint(1) NOT NULL,
@@ -1000,11 +1000,11 @@ CREATE TABLE `oc_custom_field_customer_group` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_custom_field_description`
+-- Table structure for table `bcit_custom_field_description`
 --
 
-DROP TABLE IF EXISTS `oc_custom_field_description`;
-CREATE TABLE `oc_custom_field_description` (
+DROP TABLE IF EXISTS `bcit_custom_field_description`;
+CREATE TABLE `bcit_custom_field_description` (
   `custom_field_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
   `name` varchar(128) NOT NULL,
@@ -1014,11 +1014,11 @@ CREATE TABLE `oc_custom_field_description` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_custom_field_value`
+-- Table structure for table `bcit_custom_field_value`
 --
 
-DROP TABLE IF EXISTS `oc_custom_field_value`;
-CREATE TABLE `oc_custom_field_value` (
+DROP TABLE IF EXISTS `bcit_custom_field_value`;
+CREATE TABLE `bcit_custom_field_value` (
   `custom_field_value_id` int(11) NOT NULL AUTO_INCREMENT,
   `custom_field_id` int(11) NOT NULL,
   `sort_order` int(3) NOT NULL,
@@ -1028,11 +1028,11 @@ CREATE TABLE `oc_custom_field_value` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_custom_field_value_description`
+-- Table structure for table `bcit_custom_field_value_description`
 --
 
-DROP TABLE IF EXISTS `oc_custom_field_value_description`;
-CREATE TABLE `oc_custom_field_value_description` (
+DROP TABLE IF EXISTS `bcit_custom_field_value_description`;
+CREATE TABLE `bcit_custom_field_value_description` (
   `custom_field_value_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
   `custom_field_id` int(11) NOT NULL,
@@ -1043,11 +1043,11 @@ CREATE TABLE `oc_custom_field_value_description` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_download`
+-- Table structure for table `bcit_download`
 --
 
-DROP TABLE IF EXISTS `oc_download`;
-CREATE TABLE `oc_download` (
+DROP TABLE IF EXISTS `bcit_download`;
+CREATE TABLE `bcit_download` (
   `download_id` int(11) NOT NULL AUTO_INCREMENT,
   `filename` varchar(128) NOT NULL,
   `mask` varchar(128) NOT NULL,
@@ -1058,11 +1058,11 @@ CREATE TABLE `oc_download` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_download_description`
+-- Table structure for table `bcit_download_description`
 --
 
-DROP TABLE IF EXISTS `oc_download_description`;
-CREATE TABLE `oc_download_description` (
+DROP TABLE IF EXISTS `bcit_download_description`;
+CREATE TABLE `bcit_download_description` (
   `download_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
   `name` varchar(64) NOT NULL,
@@ -1072,11 +1072,11 @@ CREATE TABLE `oc_download_description` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_event`
+-- Table structure for table `bcit_event`
 --
 
-DROP TABLE IF EXISTS `oc_event`;
-CREATE TABLE `oc_event` (
+DROP TABLE IF EXISTS `bcit_event`;
+CREATE TABLE `bcit_event` (
   `event_id` int(11) NOT NULL AUTO_INCREMENT,
   `code` varchar(32) NOT NULL,
   `trigger` text NOT NULL,
@@ -1086,11 +1086,11 @@ CREATE TABLE `oc_event` (
 
 
 --
--- Table structure for table `oc_extension`
+-- Table structure for table `bcit_extension`
 --
 
-DROP TABLE IF EXISTS `oc_extension`;
-CREATE TABLE `oc_extension` (
+DROP TABLE IF EXISTS `bcit_extension`;
+CREATE TABLE `bcit_extension` (
   `extension_id` int(11) NOT NULL AUTO_INCREMENT,
   `type` varchar(32) NOT NULL,
   `code` varchar(32) NOT NULL,
@@ -1098,10 +1098,10 @@ CREATE TABLE `oc_extension` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `oc_extension`
+-- Dumping data for table `bcit_extension`
 --
 
-INSERT INTO `oc_extension` (`extension_id`, `type`, `code`) VALUES
+INSERT INTO `bcit_extension` (`extension_id`, `type`, `code`) VALUES
 (1, 'payment', 'cod'),
 (2, 'total', 'shipping'),
 (3, 'total', 'sub_total'),
@@ -1125,11 +1125,11 @@ INSERT INTO `oc_extension` (`extension_id`, `type`, `code`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_filter`
+-- Table structure for table `bcit_filter`
 --
 
-DROP TABLE IF EXISTS `oc_filter`;
-CREATE TABLE `oc_filter` (
+DROP TABLE IF EXISTS `bcit_filter`;
+CREATE TABLE `bcit_filter` (
   `filter_id` int(11) NOT NULL AUTO_INCREMENT,
   `filter_group_id` int(11) NOT NULL,
   `sort_order` int(3) NOT NULL,
@@ -1139,11 +1139,11 @@ CREATE TABLE `oc_filter` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_filter_description`
+-- Table structure for table `bcit_filter_description`
 --
 
-DROP TABLE IF EXISTS `oc_filter_description`;
-CREATE TABLE `oc_filter_description` (
+DROP TABLE IF EXISTS `bcit_filter_description`;
+CREATE TABLE `bcit_filter_description` (
   `filter_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
   `filter_group_id` int(11) NOT NULL,
@@ -1154,11 +1154,11 @@ CREATE TABLE `oc_filter_description` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_filter_group`
+-- Table structure for table `bcit_filter_group`
 --
 
-DROP TABLE IF EXISTS `oc_filter_group`;
-CREATE TABLE `oc_filter_group` (
+DROP TABLE IF EXISTS `bcit_filter_group`;
+CREATE TABLE `bcit_filter_group` (
   `filter_group_id` int(11) NOT NULL AUTO_INCREMENT,
   `sort_order` int(3) NOT NULL,
   PRIMARY KEY (`filter_group_id`)
@@ -1167,11 +1167,11 @@ CREATE TABLE `oc_filter_group` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_filter_group_description`
+-- Table structure for table `bcit_filter_group_description`
 --
 
-DROP TABLE IF EXISTS `oc_filter_group_description`;
-CREATE TABLE `oc_filter_group_description` (
+DROP TABLE IF EXISTS `bcit_filter_group_description`;
+CREATE TABLE `bcit_filter_group_description` (
   `filter_group_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
   `name` varchar(64) NOT NULL,
@@ -1181,11 +1181,11 @@ CREATE TABLE `oc_filter_group_description` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_geo_zone`
+-- Table structure for table `bcit_geo_zone`
 --
 
-DROP TABLE IF EXISTS `oc_geo_zone`;
-CREATE TABLE `oc_geo_zone` (
+DROP TABLE IF EXISTS `bcit_geo_zone`;
+CREATE TABLE `bcit_geo_zone` (
   `geo_zone_id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(32) NOT NULL,
   `description` varchar(255) NOT NULL,
@@ -1195,21 +1195,21 @@ CREATE TABLE `oc_geo_zone` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `oc_geo_zone`
+-- Dumping data for table `bcit_geo_zone`
 --
 
-INSERT INTO `oc_geo_zone` (`geo_zone_id`, `name`, `description`, `date_modified`, `date_added`) VALUES
+INSERT INTO `bcit_geo_zone` (`geo_zone_id`, `name`, `description`, `date_modified`, `date_added`) VALUES
 (3, 'UK VAT Zone', 'UK VAT', '2010-02-26 22:33:24', '2009-01-06 23:26:25'),
 (4, 'UK Shipping', 'UK Shipping Zones', '2010-12-15 15:18:13', '2009-06-23 01:14:53');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_information`
+-- Table structure for table `bcit_information`
 --
 
-DROP TABLE IF EXISTS `oc_information`;
-CREATE TABLE `oc_information` (
+DROP TABLE IF EXISTS `bcit_information`;
+CREATE TABLE `bcit_information` (
   `information_id` int(11) NOT NULL AUTO_INCREMENT,
   `bottom` int(1) NOT NULL DEFAULT '0',
   `sort_order` int(3) NOT NULL DEFAULT '0',
@@ -1219,11 +1219,11 @@ CREATE TABLE `oc_information` (
 
 
 --
--- Table structure for table `oc_information_description`
+-- Table structure for table `bcit_information_description`
 --
 
-DROP TABLE IF EXISTS `oc_information_description`;
-CREATE TABLE `oc_information_description` (
+DROP TABLE IF EXISTS `bcit_information_description`;
+CREATE TABLE `bcit_information_description` (
   `information_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
   `title` varchar(64) NOT NULL,
@@ -1236,11 +1236,11 @@ CREATE TABLE `oc_information_description` (
 
 
 --
--- Table structure for table `oc_information_to_layout`
+-- Table structure for table `bcit_information_to_layout`
 --
 
-DROP TABLE IF EXISTS `oc_information_to_layout`;
-CREATE TABLE `oc_information_to_layout` (
+DROP TABLE IF EXISTS `bcit_information_to_layout`;
+CREATE TABLE `bcit_information_to_layout` (
   `information_id` int(11) NOT NULL,
   `store_id` int(11) NOT NULL,
   `layout_id` int(11) NOT NULL,
@@ -1250,11 +1250,11 @@ CREATE TABLE `oc_information_to_layout` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_information_to_store`
+-- Table structure for table `bcit_information_to_store`
 --
 
-DROP TABLE IF EXISTS `oc_information_to_store`;
-CREATE TABLE `oc_information_to_store` (
+DROP TABLE IF EXISTS `bcit_information_to_store`;
+CREATE TABLE `bcit_information_to_store` (
   `information_id` int(11) NOT NULL,
   `store_id` int(11) NOT NULL,
   PRIMARY KEY (`information_id`,`store_id`)
@@ -1262,11 +1262,11 @@ CREATE TABLE `oc_information_to_store` (
 
 
 --
--- Table structure for table `oc_language`
+-- Table structure for table `bcit_language`
 --
 
-DROP TABLE IF EXISTS `oc_language`;
-CREATE TABLE `oc_language` (
+DROP TABLE IF EXISTS `bcit_language`;
+CREATE TABLE `bcit_language` (
   `language_id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(32) NOT NULL,
   `code` varchar(5) NOT NULL,
@@ -1280,41 +1280,41 @@ CREATE TABLE `oc_language` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `oc_language`
+-- Dumping data for table `bcit_language`
 --
 
-INSERT INTO `oc_language` (`language_id`, `name`, `code`, `locale`, `image`, `directory`, `sort_order`, `status`) VALUES
+INSERT INTO `bcit_language` (`language_id`, `name`, `code`, `locale`, `image`, `directory`, `sort_order`, `status`) VALUES
 (1, 'Tiếng Việt', 'vi', 'vi_VN.UTF-8,vi_VN,vi-vn,vietnamese', 'vn.png', 'vietnamese', 1, 1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_layout`
+-- Table structure for table `bcit_layout`
 --
 
-DROP TABLE IF EXISTS `oc_layout`;
-CREATE TABLE `oc_layout` (
+DROP TABLE IF EXISTS `bcit_layout`;
+CREATE TABLE `bcit_layout` (
   `layout_id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(64) NOT NULL,
   PRIMARY KEY (`layout_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `oc_layout`
+-- Dumping data for table `bcit_layout`
 --
 
-INSERT INTO `oc_layout` (`layout_id`, `name`) VALUES
+INSERT INTO `bcit_layout` (`layout_id`, `name`) VALUES
 (1, 'Home'),
 (2, 'Default');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_layout_module`
+-- Table structure for table `bcit_layout_module`
 --
 
-DROP TABLE IF EXISTS `oc_layout_module`;
-CREATE TABLE `oc_layout_module` (
+DROP TABLE IF EXISTS `bcit_layout_module`;
+CREATE TABLE `bcit_layout_module` (
   `layout_module_id` int(11) NOT NULL AUTO_INCREMENT,
   `layout_id` int(11) NOT NULL,
   `code` varchar(64) NOT NULL,
@@ -1325,11 +1325,11 @@ CREATE TABLE `oc_layout_module` (
 
 
 --
--- Table structure for table `oc_layout_route`
+-- Table structure for table `bcit_layout_route`
 --
 
-DROP TABLE IF EXISTS `oc_layout_route`;
-CREATE TABLE `oc_layout_route` (
+DROP TABLE IF EXISTS `bcit_layout_route`;
+CREATE TABLE `bcit_layout_route` (
   `layout_route_id` int(11) NOT NULL AUTO_INCREMENT,
   `layout_id` int(11) NOT NULL,
   `store_id` int(11) NOT NULL,
@@ -1338,21 +1338,21 @@ CREATE TABLE `oc_layout_route` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Table structure for table `oc_length_class`
+-- Table structure for table `bcit_length_class`
 --
 
-DROP TABLE IF EXISTS `oc_length_class`;
-CREATE TABLE `oc_length_class` (
+DROP TABLE IF EXISTS `bcit_length_class`;
+CREATE TABLE `bcit_length_class` (
   `length_class_id` int(11) NOT NULL AUTO_INCREMENT,
   `value` decimal(15,8) NOT NULL,
   PRIMARY KEY (`length_class_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `oc_length_class`
+-- Dumping data for table `bcit_length_class`
 --
 
-INSERT INTO `oc_length_class` (`length_class_id`, `value`) VALUES
+INSERT INTO `bcit_length_class` (`length_class_id`, `value`) VALUES
 (1, '1.00000000'),
 (2, '10.00000000'),
 (3, '0.39370000');
@@ -1360,11 +1360,11 @@ INSERT INTO `oc_length_class` (`length_class_id`, `value`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_length_class_description`
+-- Table structure for table `bcit_length_class_description`
 --
 
-DROP TABLE IF EXISTS `oc_length_class_description`;
-CREATE TABLE `oc_length_class_description` (
+DROP TABLE IF EXISTS `bcit_length_class_description`;
+CREATE TABLE `bcit_length_class_description` (
   `length_class_id` int(11) NOT NULL AUTO_INCREMENT,
   `language_id` int(11) NOT NULL,
   `title` varchar(32) NOT NULL,
@@ -1373,10 +1373,10 @@ CREATE TABLE `oc_length_class_description` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `oc_length_class_description`
+-- Dumping data for table `bcit_length_class_description`
 --
 
-INSERT INTO `oc_length_class_description` (`length_class_id`, `language_id`, `title`, `unit`) VALUES
+INSERT INTO `bcit_length_class_description` (`length_class_id`, `language_id`, `title`, `unit`) VALUES
 (1, 1, 'Centimeter', 'cm'),
 (2, 1, 'Millimeter', 'mm'),
 (3, 1, 'Inch', 'in');
@@ -1384,11 +1384,11 @@ INSERT INTO `oc_length_class_description` (`length_class_id`, `language_id`, `ti
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_location`
+-- Table structure for table `bcit_location`
 --
 
-DROP TABLE IF EXISTS `oc_location`;
-CREATE TABLE `oc_location` (
+DROP TABLE IF EXISTS `bcit_location`;
+CREATE TABLE `bcit_location` (
   `location_id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(32) NOT NULL,
   `address` text NOT NULL,
@@ -1405,11 +1405,11 @@ CREATE TABLE `oc_location` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_manufacturer`
+-- Table structure for table `bcit_manufacturer`
 --
 
-DROP TABLE IF EXISTS `oc_manufacturer`;
-CREATE TABLE `oc_manufacturer` (
+DROP TABLE IF EXISTS `bcit_manufacturer`;
+CREATE TABLE `bcit_manufacturer` (
   `manufacturer_id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(64) NOT NULL,
   `image` varchar(255) DEFAULT NULL,
@@ -1419,22 +1419,22 @@ CREATE TABLE `oc_manufacturer` (
 
 
 --
--- Table structure for table `oc_manufacturer_to_store`
+-- Table structure for table `bcit_manufacturer_to_store`
 --
 
-DROP TABLE IF EXISTS `oc_manufacturer_to_store`;
-CREATE TABLE `oc_manufacturer_to_store` (
+DROP TABLE IF EXISTS `bcit_manufacturer_to_store`;
+CREATE TABLE `bcit_manufacturer_to_store` (
   `manufacturer_id` int(11) NOT NULL,
   `store_id` int(11) NOT NULL,
   PRIMARY KEY (`manufacturer_id`,`store_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Table structure for table `oc_marketing`
+-- Table structure for table `bcit_marketing`
 --
 
-DROP TABLE IF EXISTS `oc_marketing`;
-CREATE TABLE `oc_marketing` (
+DROP TABLE IF EXISTS `bcit_marketing`;
+CREATE TABLE `bcit_marketing` (
   `marketing_id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(32) NOT NULL,
   `description` text NOT NULL,
@@ -1447,11 +1447,11 @@ CREATE TABLE `oc_marketing` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_modification`
+-- Table structure for table `bcit_modification`
 --
 
-DROP TABLE IF EXISTS `oc_modification`;
-CREATE TABLE `oc_modification` (
+DROP TABLE IF EXISTS `bcit_modification`;
+CREATE TABLE `bcit_modification` (
   `modification_id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(64) NOT NULL,
   `code` varchar(64) NOT NULL,
@@ -1466,11 +1466,11 @@ CREATE TABLE `oc_modification` (
 
 -- ----------------------------------------------------------
 
--- Table structure for table `oc_module`
+-- Table structure for table `bcit_module`
 --
 
-DROP TABLE IF EXISTS `oc_module`;
-CREATE TABLE `oc_module` (
+DROP TABLE IF EXISTS `bcit_module`;
+CREATE TABLE `bcit_module` (
   `module_id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(64) NOT NULL,
   `code` varchar(32) NOT NULL,
@@ -1480,11 +1480,11 @@ CREATE TABLE `oc_module` (
 
 
 --
--- Table structure for table `oc_option`
+-- Table structure for table `bcit_option`
 --
 
-DROP TABLE IF EXISTS `oc_option`;
-CREATE TABLE `oc_option` (
+DROP TABLE IF EXISTS `bcit_option`;
+CREATE TABLE `bcit_option` (
   `option_id` int(11) NOT NULL AUTO_INCREMENT,
   `type` varchar(32) NOT NULL,
   `sort_order` int(3) NOT NULL,
@@ -1492,11 +1492,11 @@ CREATE TABLE `oc_option` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Table structure for table `oc_option_description`
+-- Table structure for table `bcit_option_description`
 --
 
-DROP TABLE IF EXISTS `oc_option_description`;
-CREATE TABLE `oc_option_description` (
+DROP TABLE IF EXISTS `bcit_option_description`;
+CREATE TABLE `bcit_option_description` (
   `option_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
   `name` varchar(128) NOT NULL,
@@ -1505,11 +1505,11 @@ CREATE TABLE `oc_option_description` (
 
 
 --
--- Table structure for table `oc_option_value`
+-- Table structure for table `bcit_option_value`
 --
 
-DROP TABLE IF EXISTS `oc_option_value`;
-CREATE TABLE `oc_option_value` (
+DROP TABLE IF EXISTS `bcit_option_value`;
+CREATE TABLE `bcit_option_value` (
   `option_value_id` int(11) NOT NULL AUTO_INCREMENT,
   `option_id` int(11) NOT NULL,
   `image` varchar(255) NOT NULL,
@@ -1519,11 +1519,11 @@ CREATE TABLE `oc_option_value` (
 
 
 --
--- Table structure for table `oc_option_value_description`
+-- Table structure for table `bcit_option_value_description`
 --
 
-DROP TABLE IF EXISTS `oc_option_value_description`;
-CREATE TABLE `oc_option_value_description` (
+DROP TABLE IF EXISTS `bcit_option_value_description`;
+CREATE TABLE `bcit_option_value_description` (
   `option_value_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
   `option_id` int(11) NOT NULL,
@@ -1534,11 +1534,11 @@ CREATE TABLE `oc_option_value_description` (
 
 
 --
--- Table structure for table `oc_order`
+-- Table structure for table `bcit_order`
 --
 
-DROP TABLE IF EXISTS `oc_order`;
-CREATE TABLE `oc_order` (
+DROP TABLE IF EXISTS `bcit_order`;
+CREATE TABLE `bcit_order` (
   `order_id` int(11) NOT NULL AUTO_INCREMENT,
   `invoice_no` int(11) NOT NULL DEFAULT '0',
   `invoice_prefix` varchar(26) NOT NULL,
@@ -1606,11 +1606,11 @@ CREATE TABLE `oc_order` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_order_custom_field`
+-- Table structure for table `bcit_order_custom_field`
 --
 
-DROP TABLE IF EXISTS `oc_order_custom_field`;
-CREATE TABLE `oc_order_custom_field` (
+DROP TABLE IF EXISTS `bcit_order_custom_field`;
+CREATE TABLE `bcit_order_custom_field` (
   `order_custom_field_id` int(11) NOT NULL AUTO_INCREMENT,
   `order_id` int(11) NOT NULL,
   `custom_field_id` int(11) NOT NULL,
@@ -1625,11 +1625,11 @@ CREATE TABLE `oc_order_custom_field` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_order_history`
+-- Table structure for table `bcit_order_history`
 --
 
-DROP TABLE IF EXISTS `oc_order_history`;
-CREATE TABLE `oc_order_history` (
+DROP TABLE IF EXISTS `bcit_order_history`;
+CREATE TABLE `bcit_order_history` (
   `order_history_id` int(11) NOT NULL AUTO_INCREMENT,
   `order_id` int(11) NOT NULL,
   `order_status_id` int(11) NOT NULL,
@@ -1642,11 +1642,11 @@ CREATE TABLE `oc_order_history` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_order_option`
+-- Table structure for table `bcit_order_option`
 --
 
-DROP TABLE IF EXISTS `oc_order_option`;
-CREATE TABLE `oc_order_option` (
+DROP TABLE IF EXISTS `bcit_order_option`;
+CREATE TABLE `bcit_order_option` (
   `order_option_id` int(11) NOT NULL AUTO_INCREMENT,
   `order_id` int(11) NOT NULL,
   `order_product_id` int(11) NOT NULL,
@@ -1661,11 +1661,11 @@ CREATE TABLE `oc_order_option` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_order_product`
+-- Table structure for table `bcit_order_product`
 --
 
-DROP TABLE IF EXISTS `oc_order_product`;
-CREATE TABLE `oc_order_product` (
+DROP TABLE IF EXISTS `bcit_order_product`;
+CREATE TABLE `bcit_order_product` (
   `order_product_id` int(11) NOT NULL AUTO_INCREMENT,
   `order_id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
@@ -1682,11 +1682,11 @@ CREATE TABLE `oc_order_product` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_order_recurring`
+-- Table structure for table `bcit_order_recurring`
 --
 
-DROP TABLE IF EXISTS `oc_order_recurring`;
-CREATE TABLE `oc_order_recurring` (
+DROP TABLE IF EXISTS `bcit_order_recurring`;
+CREATE TABLE `bcit_order_recurring` (
   `order_recurring_id` int(11) NOT NULL AUTO_INCREMENT,
   `order_id` int(11) NOT NULL,
   `reference` varchar(255) NOT NULL,
@@ -1713,11 +1713,11 @@ CREATE TABLE `oc_order_recurring` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_order_recurring_transaction`
+-- Table structure for table `bcit_order_recurring_transaction`
 --
 
-DROP TABLE IF EXISTS `oc_order_recurring_transaction`;
-CREATE TABLE `oc_order_recurring_transaction` (
+DROP TABLE IF EXISTS `bcit_order_recurring_transaction`;
+CREATE TABLE `bcit_order_recurring_transaction` (
   `order_recurring_transaction_id` int(11) NOT NULL AUTO_INCREMENT,
   `order_recurring_id` int(11) NOT NULL,
   `reference` varchar(255) NOT NULL,
@@ -1730,11 +1730,11 @@ CREATE TABLE `oc_order_recurring_transaction` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_order_status`
+-- Table structure for table `bcit_order_status`
 --
 
-DROP TABLE IF EXISTS `oc_order_status`;
-CREATE TABLE `oc_order_status` (
+DROP TABLE IF EXISTS `bcit_order_status`;
+CREATE TABLE `bcit_order_status` (
   `order_status_id` int(11) NOT NULL AUTO_INCREMENT,
   `language_id` int(11) NOT NULL,
   `name` varchar(32) NOT NULL,
@@ -1742,10 +1742,10 @@ CREATE TABLE `oc_order_status` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `oc_order_status`
+-- Dumping data for table `bcit_order_status`
 --
 
-INSERT INTO `oc_order_status` (`order_status_id`, `language_id`, `name`) VALUES
+INSERT INTO `bcit_order_status` (`order_status_id`, `language_id`, `name`) VALUES
 (2, 1, 'Processing'),
 (3, 1, 'Shipped'),
 (7, 1, 'Canceled'),
@@ -1764,11 +1764,11 @@ INSERT INTO `oc_order_status` (`order_status_id`, `language_id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_order_total`
+-- Table structure for table `bcit_order_total`
 --
 
-DROP TABLE IF EXISTS `oc_order_total`;
-CREATE TABLE `oc_order_total` (
+DROP TABLE IF EXISTS `bcit_order_total`;
+CREATE TABLE `bcit_order_total` (
   `order_total_id` int(10) NOT NULL AUTO_INCREMENT,
   `order_id` int(11) NOT NULL,
   `code` varchar(32) NOT NULL,
@@ -1782,11 +1782,11 @@ CREATE TABLE `oc_order_total` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_order_voucher`
+-- Table structure for table `bcit_order_voucher`
 --
 
-DROP TABLE IF EXISTS `oc_order_voucher`;
-CREATE TABLE `oc_order_voucher` (
+DROP TABLE IF EXISTS `bcit_order_voucher`;
+CREATE TABLE `bcit_order_voucher` (
   `order_voucher_id` int(11) NOT NULL AUTO_INCREMENT,
   `order_id` int(11) NOT NULL,
   `voucher_id` int(11) NOT NULL,
@@ -1805,11 +1805,11 @@ CREATE TABLE `oc_order_voucher` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_product`
+-- Table structure for table `bcit_product`
 --
 
-DROP TABLE IF EXISTS `oc_product`;
-CREATE TABLE `oc_product` (
+DROP TABLE IF EXISTS `bcit_product`;
+CREATE TABLE `bcit_product` (
   `product_id` int(11) NOT NULL AUTO_INCREMENT,
   `model` varchar(64) NOT NULL,
   `sku` varchar(64) NOT NULL,
@@ -1846,11 +1846,11 @@ CREATE TABLE `oc_product` (
 
 
 --
--- Table structure for table `oc_product_attribute`
+-- Table structure for table `bcit_product_attribute`
 --
 
-DROP TABLE IF EXISTS `oc_product_attribute`;
-CREATE TABLE `oc_product_attribute` (
+DROP TABLE IF EXISTS `bcit_product_attribute`;
+CREATE TABLE `bcit_product_attribute` (
   `product_id` int(11) NOT NULL,
   `attribute_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
@@ -1860,11 +1860,11 @@ CREATE TABLE `oc_product_attribute` (
 
 
 --
--- Table structure for table `oc_product_description`
+-- Table structure for table `bcit_product_description`
 --
 
-DROP TABLE IF EXISTS `oc_product_description`;
-CREATE TABLE `oc_product_description` (
+DROP TABLE IF EXISTS `bcit_product_description`;
+CREATE TABLE `bcit_product_description` (
   `product_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
@@ -1880,11 +1880,11 @@ CREATE TABLE `oc_product_description` (
 
 
 --
--- Table structure for table `oc_product_discount`
+-- Table structure for table `bcit_product_discount`
 --
 
-DROP TABLE IF EXISTS `oc_product_discount`;
-CREATE TABLE `oc_product_discount` (
+DROP TABLE IF EXISTS `bcit_product_discount`;
+CREATE TABLE `bcit_product_discount` (
   `product_discount_id` int(11) NOT NULL AUTO_INCREMENT,
   `product_id` int(11) NOT NULL,
   `customer_group_id` int(11) NOT NULL,
@@ -1900,11 +1900,11 @@ CREATE TABLE `oc_product_discount` (
 
 
 --
--- Table structure for table `oc_product_filter`
+-- Table structure for table `bcit_product_filter`
 --
 
-DROP TABLE IF EXISTS `oc_product_filter`;
-CREATE TABLE `oc_product_filter` (
+DROP TABLE IF EXISTS `bcit_product_filter`;
+CREATE TABLE `bcit_product_filter` (
   `product_id` int(11) NOT NULL,
   `filter_id` int(11) NOT NULL,
   PRIMARY KEY (`product_id`,`filter_id`)
@@ -1913,11 +1913,11 @@ CREATE TABLE `oc_product_filter` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_product_image`
+-- Table structure for table `bcit_product_image`
 --
 
-DROP TABLE IF EXISTS `oc_product_image`;
-CREATE TABLE `oc_product_image` (
+DROP TABLE IF EXISTS `bcit_product_image`;
+CREATE TABLE `bcit_product_image` (
   `product_image_id` int(11) NOT NULL AUTO_INCREMENT,
   `product_id` int(11) NOT NULL,
   `image` varchar(255) DEFAULT NULL,
@@ -1929,11 +1929,11 @@ CREATE TABLE `oc_product_image` (
 
 
 --
--- Table structure for table `oc_product_option`
+-- Table structure for table `bcit_product_option`
 --
 
-DROP TABLE IF EXISTS `oc_product_option`;
-CREATE TABLE `oc_product_option` (
+DROP TABLE IF EXISTS `bcit_product_option`;
+CREATE TABLE `bcit_product_option` (
   `product_option_id` int(11) NOT NULL AUTO_INCREMENT,
   `product_id` int(11) NOT NULL,
   `option_id` int(11) NOT NULL,
@@ -1945,11 +1945,11 @@ CREATE TABLE `oc_product_option` (
 
 
 --
--- Table structure for table `oc_product_option_value`
+-- Table structure for table `bcit_product_option_value`
 --
 
-DROP TABLE IF EXISTS `oc_product_option_value`;
-CREATE TABLE `oc_product_option_value` (
+DROP TABLE IF EXISTS `bcit_product_option_value`;
+CREATE TABLE `bcit_product_option_value` (
   `product_option_value_id` int(11) NOT NULL AUTO_INCREMENT,
   `product_option_id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
@@ -1969,11 +1969,11 @@ CREATE TABLE `oc_product_option_value` (
 
 
 --
--- Table structure for table `oc_product_recurring`
+-- Table structure for table `bcit_product_recurring`
 --
 
-DROP TABLE IF EXISTS `oc_product_recurring`;
-CREATE TABLE `oc_product_recurring` (
+DROP TABLE IF EXISTS `bcit_product_recurring`;
+CREATE TABLE `bcit_product_recurring` (
   `product_id` int(11) NOT NULL,
   `recurring_id` int(11) NOT NULL,
   `customer_group_id` int(11) NOT NULL,
@@ -1983,11 +1983,11 @@ CREATE TABLE `oc_product_recurring` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_product_related`
+-- Table structure for table `bcit_product_related`
 --
 
-DROP TABLE IF EXISTS `oc_product_related`;
-CREATE TABLE `oc_product_related` (
+DROP TABLE IF EXISTS `bcit_product_related`;
+CREATE TABLE `bcit_product_related` (
   `product_id` int(11) NOT NULL,
   `related_id` int(11) NOT NULL,
   PRIMARY KEY (`product_id`,`related_id`)
@@ -1996,11 +1996,11 @@ CREATE TABLE `oc_product_related` (
 
 
 --
--- Table structure for table `oc_product_reward`
+-- Table structure for table `bcit_product_reward`
 --
 
-DROP TABLE IF EXISTS `oc_product_reward`;
-CREATE TABLE `oc_product_reward` (
+DROP TABLE IF EXISTS `bcit_product_reward`;
+CREATE TABLE `bcit_product_reward` (
   `product_reward_id` int(11) NOT NULL AUTO_INCREMENT,
   `product_id` int(11) NOT NULL DEFAULT '0',
   `customer_group_id` int(11) NOT NULL DEFAULT '0',
@@ -2011,11 +2011,11 @@ CREATE TABLE `oc_product_reward` (
 
 
 --
--- Table structure for table `oc_product_special`
+-- Table structure for table `bcit_product_special`
 --
 
-DROP TABLE IF EXISTS `oc_product_special`;
-CREATE TABLE `oc_product_special` (
+DROP TABLE IF EXISTS `bcit_product_special`;
+CREATE TABLE `bcit_product_special` (
   `product_special_id` int(11) NOT NULL AUTO_INCREMENT,
   `product_id` int(11) NOT NULL,
   `customer_group_id` int(11) NOT NULL,
@@ -2030,11 +2030,11 @@ CREATE TABLE `oc_product_special` (
 
 
 --
--- Table structure for table `oc_product_to_category`
+-- Table structure for table `bcit_product_to_category`
 --
 
-DROP TABLE IF EXISTS `oc_product_to_category`;
-CREATE TABLE `oc_product_to_category` (
+DROP TABLE IF EXISTS `bcit_product_to_category`;
+CREATE TABLE `bcit_product_to_category` (
   `product_id` int(11) NOT NULL,
   `category_id` int(11) NOT NULL,
   PRIMARY KEY (`product_id`,`category_id`),
@@ -2044,11 +2044,11 @@ CREATE TABLE `oc_product_to_category` (
 
 
 --
--- Table structure for table `oc_product_to_download`
+-- Table structure for table `bcit_product_to_download`
 --
 
-DROP TABLE IF EXISTS `oc_product_to_download`;
-CREATE TABLE `oc_product_to_download` (
+DROP TABLE IF EXISTS `bcit_product_to_download`;
+CREATE TABLE `bcit_product_to_download` (
   `product_id` int(11) NOT NULL,
   `download_id` int(11) NOT NULL,
   PRIMARY KEY (`product_id`,`download_id`)
@@ -2057,11 +2057,11 @@ CREATE TABLE `oc_product_to_download` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_product_to_layout`
+-- Table structure for table `bcit_product_to_layout`
 --
 
-DROP TABLE IF EXISTS `oc_product_to_layout`;
-CREATE TABLE `oc_product_to_layout` (
+DROP TABLE IF EXISTS `bcit_product_to_layout`;
+CREATE TABLE `bcit_product_to_layout` (
   `product_id` int(11) NOT NULL,
   `store_id` int(11) NOT NULL,
   `layout_id` int(11) NOT NULL,
@@ -2071,11 +2071,11 @@ CREATE TABLE `oc_product_to_layout` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_product_to_store`
+-- Table structure for table `bcit_product_to_store`
 --
 
-DROP TABLE IF EXISTS `oc_product_to_store`;
-CREATE TABLE `oc_product_to_store` (
+DROP TABLE IF EXISTS `bcit_product_to_store`;
+CREATE TABLE `bcit_product_to_store` (
   `product_id` int(11) NOT NULL,
   `store_id` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`product_id`,`store_id`)
@@ -2083,11 +2083,11 @@ CREATE TABLE `oc_product_to_store` (
 
 
 --
--- Table structure for table `oc_recurring`
+-- Table structure for table `bcit_recurring`
 --
 
-DROP TABLE IF EXISTS `oc_recurring`;
-CREATE TABLE `oc_recurring` (
+DROP TABLE IF EXISTS `bcit_recurring`;
+CREATE TABLE `bcit_recurring` (
   `recurring_id` int(11) NOT NULL AUTO_INCREMENT,
   `price` decimal(10,4) NOT NULL,
   `frequency` enum('day','week','semi_month','month','year') NOT NULL,
@@ -2106,11 +2106,11 @@ CREATE TABLE `oc_recurring` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_recurring_description`
+-- Table structure for table `bcit_recurring_description`
 --
 
-DROP TABLE IF EXISTS `oc_recurring_description`;
-CREATE TABLE `oc_recurring_description` (
+DROP TABLE IF EXISTS `bcit_recurring_description`;
+CREATE TABLE `bcit_recurring_description` (
   `recurring_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
@@ -2120,11 +2120,11 @@ CREATE TABLE `oc_recurring_description` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_return`
+-- Table structure for table `bcit_return`
 --
 
-DROP TABLE IF EXISTS `oc_return`;
-CREATE TABLE `oc_return` (
+DROP TABLE IF EXISTS `bcit_return`;
+CREATE TABLE `bcit_return` (
   `return_id` int(11) NOT NULL AUTO_INCREMENT,
   `order_id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
@@ -2150,11 +2150,11 @@ CREATE TABLE `oc_return` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_return_action`
+-- Table structure for table `bcit_return_action`
 --
 
-DROP TABLE IF EXISTS `oc_return_action`;
-CREATE TABLE `oc_return_action` (
+DROP TABLE IF EXISTS `bcit_return_action`;
+CREATE TABLE `bcit_return_action` (
   `return_action_id` int(11) NOT NULL AUTO_INCREMENT,
   `language_id` int(11) NOT NULL DEFAULT '0',
   `name` varchar(64) NOT NULL,
@@ -2162,10 +2162,10 @@ CREATE TABLE `oc_return_action` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `oc_return_action`
+-- Dumping data for table `bcit_return_action`
 --
 
-INSERT INTO `oc_return_action` (`return_action_id`, `language_id`, `name`) VALUES
+INSERT INTO `bcit_return_action` (`return_action_id`, `language_id`, `name`) VALUES
 (1, 1, 'Refunded'),
 (2, 1, 'Credit Issued'),
 (3, 1, 'Replacement Sent');
@@ -2173,11 +2173,11 @@ INSERT INTO `oc_return_action` (`return_action_id`, `language_id`, `name`) VALUE
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_return_history`
+-- Table structure for table `bcit_return_history`
 --
 
-DROP TABLE IF EXISTS `oc_return_history`;
-CREATE TABLE `oc_return_history` (
+DROP TABLE IF EXISTS `bcit_return_history`;
+CREATE TABLE `bcit_return_history` (
   `return_history_id` int(11) NOT NULL AUTO_INCREMENT,
   `return_id` int(11) NOT NULL,
   `return_status_id` int(11) NOT NULL,
@@ -2190,11 +2190,11 @@ CREATE TABLE `oc_return_history` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_return_reason`
+-- Table structure for table `bcit_return_reason`
 --
 
-DROP TABLE IF EXISTS `oc_return_reason`;
-CREATE TABLE `oc_return_reason` (
+DROP TABLE IF EXISTS `bcit_return_reason`;
+CREATE TABLE `bcit_return_reason` (
   `return_reason_id` int(11) NOT NULL AUTO_INCREMENT,
   `language_id` int(11) NOT NULL DEFAULT '0',
   `name` varchar(128) NOT NULL,
@@ -2202,10 +2202,10 @@ CREATE TABLE `oc_return_reason` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `oc_return_reason`
+-- Dumping data for table `bcit_return_reason`
 --
 
-INSERT INTO `oc_return_reason` (`return_reason_id`, `language_id`, `name`) VALUES
+INSERT INTO `bcit_return_reason` (`return_reason_id`, `language_id`, `name`) VALUES
 (1, 1, 'Dead On Arrival'),
 (2, 1, 'Received Wrong Item'),
 (3, 1, 'Order Error'),
@@ -2215,11 +2215,11 @@ INSERT INTO `oc_return_reason` (`return_reason_id`, `language_id`, `name`) VALUE
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_return_status`
+-- Table structure for table `bcit_return_status`
 --
 
-DROP TABLE IF EXISTS `oc_return_status`;
-CREATE TABLE `oc_return_status` (
+DROP TABLE IF EXISTS `bcit_return_status`;
+CREATE TABLE `bcit_return_status` (
   `return_status_id` int(11) NOT NULL AUTO_INCREMENT,
   `language_id` int(11) NOT NULL DEFAULT '0',
   `name` varchar(32) NOT NULL,
@@ -2227,10 +2227,10 @@ CREATE TABLE `oc_return_status` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `oc_return_status`
+-- Dumping data for table `bcit_return_status`
 --
 
-INSERT INTO `oc_return_status` (`return_status_id`, `language_id`, `name`) VALUES
+INSERT INTO `bcit_return_status` (`return_status_id`, `language_id`, `name`) VALUES
 (1, 1, 'Pending'),
 (3, 1, 'Complete'),
 (2, 1, 'Awaiting Products');
@@ -2238,11 +2238,11 @@ INSERT INTO `oc_return_status` (`return_status_id`, `language_id`, `name`) VALUE
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_review`
+-- Table structure for table `bcit_review`
 --
 
-DROP TABLE IF EXISTS `oc_review`;
-CREATE TABLE `oc_review` (
+DROP TABLE IF EXISTS `bcit_review`;
+CREATE TABLE `bcit_review` (
   `review_id` int(11) NOT NULL AUTO_INCREMENT,
   `product_id` int(11) NOT NULL,
   `customer_id` int(11) NOT NULL,
@@ -2259,11 +2259,11 @@ CREATE TABLE `oc_review` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_setting`
+-- Table structure for table `bcit_setting`
 --
 
-DROP TABLE IF EXISTS `oc_setting`;
-CREATE TABLE `oc_setting` (
+DROP TABLE IF EXISTS `bcit_setting`;
+CREATE TABLE `bcit_setting` (
   `setting_id` int(11) NOT NULL AUTO_INCREMENT,
   `store_id` int(11) NOT NULL DEFAULT '0',
   `code` varchar(32) NOT NULL,
@@ -2274,10 +2274,10 @@ CREATE TABLE `oc_setting` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `oc_setting`
+-- Dumping data for table `bcit_setting`
 --
 
-INSERT INTO `oc_setting` (`setting_id`, `store_id`, `code`, `key`, `value`, `serialized`) VALUES
+INSERT INTO `bcit_setting` (`setting_id`, `store_id`, `code`, `key`, `value`, `serialized`) VALUES
 (1, 0, 'shipping', 'shipping_sort_order', '3', 0),
 (2, 0, 'sub_total', 'sub_total_sort_order', '1', 0),
 (3, 0, 'sub_total', 'sub_total_status', '1', 0),
@@ -2334,8 +2334,8 @@ INSERT INTO `oc_setting` (`setting_id`, `store_id`, `code`, `key`, `value`, `ser
 (185, 0, 'config', 'config_layout_id', '4', 0),
 (186, 0, 'config', 'config_country_id', '222', 0),
 (187, 0, 'config', 'config_zone_id', '3563', 0),
-(188, 0, 'config', 'config_language', 'en', 0),
-(189, 0, 'config', 'config_admin_language', 'en', 0),
+(188, 0, 'config', 'config_language', 'vi', 0),
+(189, 0, 'config', 'config_admin_language', 'vi', 0),
 (190, 0, 'config', 'config_currency', 'USD', 0),
 (191, 0, 'config', 'config_currency_auto', '1', 0),
 (192, 0, 'config', 'config_length_class_id', '1', 0),
@@ -2430,11 +2430,11 @@ INSERT INTO `oc_setting` (`setting_id`, `store_id`, `code`, `key`, `value`, `ser
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_stock_status`
+-- Table structure for table `bcit_stock_status`
 --
 
-DROP TABLE IF EXISTS `oc_stock_status`;
-CREATE TABLE `oc_stock_status` (
+DROP TABLE IF EXISTS `bcit_stock_status`;
+CREATE TABLE `bcit_stock_status` (
   `stock_status_id` int(11) NOT NULL AUTO_INCREMENT,
   `language_id` int(11) NOT NULL,
   `name` varchar(32) NOT NULL,
@@ -2442,10 +2442,10 @@ CREATE TABLE `oc_stock_status` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `oc_stock_status`
+-- Dumping data for table `bcit_stock_status`
 --
 
-INSERT INTO `oc_stock_status` (`stock_status_id`, `language_id`, `name`) VALUES
+INSERT INTO `bcit_stock_status` (`stock_status_id`, `language_id`, `name`) VALUES
 (7, 1, 'In Stock'),
 (8, 1, 'Pre-Order'),
 (5, 1, 'Out Of Stock'),
@@ -2454,11 +2454,11 @@ INSERT INTO `oc_stock_status` (`stock_status_id`, `language_id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_store`
+-- Table structure for table `bcit_store`
 --
 
-DROP TABLE IF EXISTS `oc_store`;
-CREATE TABLE `oc_store` (
+DROP TABLE IF EXISTS `bcit_store`;
+CREATE TABLE `bcit_store` (
   `store_id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(64) NOT NULL,
   `url` varchar(255) NOT NULL,
@@ -2469,11 +2469,11 @@ CREATE TABLE `oc_store` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_tax_class`
+-- Table structure for table `bcit_tax_class`
 --
 
-DROP TABLE IF EXISTS `oc_tax_class`;
-CREATE TABLE `oc_tax_class` (
+DROP TABLE IF EXISTS `bcit_tax_class`;
+CREATE TABLE `bcit_tax_class` (
   `tax_class_id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(32) NOT NULL,
   `description` varchar(255) NOT NULL,
@@ -2483,21 +2483,21 @@ CREATE TABLE `oc_tax_class` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `oc_tax_class`
+-- Dumping data for table `bcit_tax_class`
 --
 
-INSERT INTO `oc_tax_class` (`tax_class_id`, `title`, `description`, `date_added`, `date_modified`) VALUES
+INSERT INTO `bcit_tax_class` (`tax_class_id`, `title`, `description`, `date_added`, `date_modified`) VALUES
 (9, 'Taxable Goods', 'Taxed goods', '2009-01-06 23:21:53', '2011-09-23 14:07:50'),
 (10, 'Downloadable Products', 'Downloadable', '2011-09-21 22:19:39', '2011-09-22 10:27:36');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_tax_rate`
+-- Table structure for table `bcit_tax_rate`
 --
 
-DROP TABLE IF EXISTS `oc_tax_rate`;
-CREATE TABLE `oc_tax_rate` (
+DROP TABLE IF EXISTS `bcit_tax_rate`;
+CREATE TABLE `bcit_tax_rate` (
   `tax_rate_id` int(11) NOT NULL AUTO_INCREMENT,
   `geo_zone_id` int(11) NOT NULL DEFAULT '0',
   `name` varchar(32) NOT NULL,
@@ -2509,42 +2509,42 @@ CREATE TABLE `oc_tax_rate` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `oc_tax_rate`
+-- Dumping data for table `bcit_tax_rate`
 --
 
-INSERT INTO `oc_tax_rate` (`tax_rate_id`, `geo_zone_id`, `name`, `rate`, `type`, `date_added`, `date_modified`) VALUES
+INSERT INTO `bcit_tax_rate` (`tax_rate_id`, `geo_zone_id`, `name`, `rate`, `type`, `date_added`, `date_modified`) VALUES
 (86, 3, 'VAT (20%)', '20.0000', 'P', '2011-03-09 21:17:10', '2011-09-22 22:24:29'),
 (87, 3, 'Eco Tax (-2.00)', '2.0000', 'F', '2011-09-21 21:49:23', '2011-09-23 00:40:19');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_tax_rate_to_customer_group`
+-- Table structure for table `bcit_tax_rate_to_customer_group`
 --
 
-DROP TABLE IF EXISTS `oc_tax_rate_to_customer_group`;
-CREATE TABLE `oc_tax_rate_to_customer_group` (
+DROP TABLE IF EXISTS `bcit_tax_rate_to_customer_group`;
+CREATE TABLE `bcit_tax_rate_to_customer_group` (
   `tax_rate_id` int(11) NOT NULL,
   `customer_group_id` int(11) NOT NULL,
   PRIMARY KEY (`tax_rate_id`,`customer_group_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `oc_tax_rate_to_customer_group`
+-- Dumping data for table `bcit_tax_rate_to_customer_group`
 --
 
-INSERT INTO `oc_tax_rate_to_customer_group` (`tax_rate_id`, `customer_group_id`) VALUES
+INSERT INTO `bcit_tax_rate_to_customer_group` (`tax_rate_id`, `customer_group_id`) VALUES
 (86, 1),
 (87, 1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_tax_rule`
+-- Table structure for table `bcit_tax_rule`
 --
 
-DROP TABLE IF EXISTS `oc_tax_rule`;
-CREATE TABLE `oc_tax_rule` (
+DROP TABLE IF EXISTS `bcit_tax_rule`;
+CREATE TABLE `bcit_tax_rule` (
   `tax_rule_id` int(11) NOT NULL AUTO_INCREMENT,
   `tax_class_id` int(11) NOT NULL,
   `tax_rate_id` int(11) NOT NULL,
@@ -2554,10 +2554,10 @@ CREATE TABLE `oc_tax_rule` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `oc_tax_rule`
+-- Dumping data for table `bcit_tax_rule`
 --
 
-INSERT INTO `oc_tax_rule` (`tax_rule_id`, `tax_class_id`, `tax_rate_id`, `based`, `priority`) VALUES
+INSERT INTO `bcit_tax_rule` (`tax_rule_id`, `tax_class_id`, `tax_rate_id`, `based`, `priority`) VALUES
 (121, 10, 86, 'payment', 1),
 (120, 10, 87, 'store', 0),
 (128, 9, 86, 'shipping', 1),
@@ -2566,11 +2566,11 @@ INSERT INTO `oc_tax_rule` (`tax_rule_id`, `tax_class_id`, `tax_rate_id`, `based`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_upload`
+-- Table structure for table `bcit_upload`
 --
 
-DROP TABLE IF EXISTS `oc_upload`;
-CREATE TABLE `oc_upload` (
+DROP TABLE IF EXISTS `bcit_upload`;
+CREATE TABLE `bcit_upload` (
   `upload_id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
   `filename` varchar(255) NOT NULL,
@@ -2582,11 +2582,11 @@ CREATE TABLE `oc_upload` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_url_alias`
+-- Table structure for table `bcit_url_alias`
 --
 
-DROP TABLE IF EXISTS `oc_url_alias`;
-CREATE TABLE `oc_url_alias` (
+DROP TABLE IF EXISTS `bcit_url_alias`;
+CREATE TABLE `bcit_url_alias` (
   `url_alias_id` int(11) NOT NULL AUTO_INCREMENT,
   `query` varchar(255) NOT NULL,
   `keyword` varchar(255) NOT NULL,
@@ -2598,11 +2598,11 @@ CREATE TABLE `oc_url_alias` (
 
 
 --
--- Table structure for table `oc_user`
+-- Table structure for table `bcit_user`
 --
 
-DROP TABLE IF EXISTS `oc_user`;
-CREATE TABLE `oc_user` (
+DROP TABLE IF EXISTS `bcit_user`;
+CREATE TABLE `bcit_user` (
   `user_id` int(11) NOT NULL AUTO_INCREMENT,
   `user_group_id` int(11) NOT NULL,
   `username` varchar(20) NOT NULL,
@@ -2622,11 +2622,11 @@ CREATE TABLE `oc_user` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_user_group`
+-- Table structure for table `bcit_user_group`
 --
 
-DROP TABLE IF EXISTS `oc_user_group`;
-CREATE TABLE `oc_user_group` (
+DROP TABLE IF EXISTS `bcit_user_group`;
+CREATE TABLE `bcit_user_group` (
   `user_group_id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(64) NOT NULL,
   `permission` text NOT NULL,
@@ -2634,21 +2634,21 @@ CREATE TABLE `oc_user_group` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `oc_user_group`
+-- Dumping data for table `bcit_user_group`
 --
 
-INSERT INTO `oc_user_group` (`user_group_id`, `name`, `permission`) VALUES
+INSERT INTO `bcit_user_group` (`user_group_id`, `name`, `permission`) VALUES
 (1, 'Administrator', '{"access":["analytics\\/google_analytics","captcha\\/basic_captcha","captcha\\/google_captcha","catalog\\/attribute","catalog\\/attribute_group","catalog\\/category","catalog\\/download","catalog\\/filter","catalog\\/information","catalog\\/manufacturer","catalog\\/option","catalog\\/product","catalog\\/recurring","catalog\\/review","common\\/column_left","common\\/filemanager","common\\/menu","common\\/profile","common\\/stats","customer\\/custom_field","customer\\/customer","customer\\/customer_group","design\\/banner","design\\/layout","extension\\/analytics","extension\\/captcha","extension\\/feed","extension\\/fraud","extension\\/installer","extension\\/modification","extension\\/module","extension\\/openbay","extension\\/payment","extension\\/shipping","extension\\/total","feed\\/google_base","feed\\/google_sitemap","feed\\/openbaypro","fraud\\/fraudlabspro","fraud\\/ip","fraud\\/maxmind","localisation\\/country","localisation\\/currency","localisation\\/geo_zone","localisation\\/language","localisation\\/length_class","localisation\\/location","localisation\\/order_status","localisation\\/return_action","localisation\\/return_reason","localisation\\/return_status","localisation\\/stock_status","localisation\\/tax_class","localisation\\/tax_rate","localisation\\/weight_class","localisation\\/zone","marketing\\/affiliate","marketing\\/contact","marketing\\/coupon","marketing\\/marketing","module\\/account","module\\/affiliate","module\\/amazon_login","module\\/amazon_pay","module\\/banner","module\\/bestseller","module\\/carousel","module\\/category","module\\/ebay_listing","module\\/featured","module\\/filter","module\\/google_hangouts","module\\/html","module\\/information","module\\/latest","module\\/pp_button","module\\/pp_login","module\\/slideshow","module\\/special","module\\/store","openbay\\/amazon","openbay\\/amazon_listing","openbay\\/amazon_product","openbay\\/amazonus","openbay\\/amazonus_listing","openbay\\/amazonus_product","openbay\\/ebay","openbay\\/ebay_profile","openbay\\/ebay_template","openbay\\/etsy","openbay\\/etsy_product","openbay\\/etsy_shipping","openbay\\/etsy_shop","payment\\/amazon_login_pay","payment\\/authorizenet_aim","payment\\/authorizenet_sim","payment\\/bank_transfer","payment\\/bluepay_hosted","payment\\/bluepay_redirect","payment\\/cheque","payment\\/cod","payment\\/firstdata","payment\\/firstdata_remote","payment\\/free_checkout","payment\\/g2apay","payment\\/globalpay","payment\\/globalpay_remote","payment\\/klarna_account","payment\\/klarna_invoice","payment\\/liqpay","payment\\/nochex","payment\\/paymate","payment\\/paypoint","payment\\/payza","payment\\/perpetual_payments","payment\\/pp_express","payment\\/pp_payflow","payment\\/pp_payflow_iframe","payment\\/pp_pro","payment\\/pp_pro_iframe","payment\\/pp_standard","payment\\/realex","payment\\/realex_remote","payment\\/sagepay_direct","payment\\/sagepay_server","payment\\/sagepay_us","payment\\/securetrading_pp","payment\\/securetrading_ws","payment\\/skrill","payment\\/twocheckout","payment\\/web_payment_software","payment\\/worldpay","report\\/affiliate","report\\/affiliate_activity","report\\/affiliate_login","report\\/customer_activity","report\\/customer_credit","report\\/customer_login","report\\/customer_online","report\\/customer_order","report\\/customer_reward","report\\/marketing","report\\/product_purchased","report\\/product_viewed","report\\/sale_coupon","report\\/sale_order","report\\/sale_return","report\\/sale_shipping","report\\/sale_tax","sale\\/order","sale\\/recurring","sale\\/return","sale\\/voucher","sale\\/voucher_theme","setting\\/setting","setting\\/store","shipping\\/auspost","shipping\\/citylink","shipping\\/fedex","shipping\\/flat","shipping\\/free","shipping\\/item","shipping\\/parcelforce_48","shipping\\/pickup","shipping\\/royal_mail","shipping\\/ups","shipping\\/usps","shipping\\/weight","tool\\/backup","tool\\/error_log","tool\\/upload","total\\/coupon","total\\/credit","total\\/handling","total\\/klarna_fee","total\\/low_order_fee","total\\/reward","total\\/shipping","total\\/sub_total","total\\/tax","total\\/total","total\\/voucher","user\\/api","user\\/user","user\\/user_permission"],"modify":["analytics\\/google_analytics","captcha\\/basic_captcha","captcha\\/google_captcha","catalog\\/attribute","catalog\\/attribute_group","catalog\\/category","catalog\\/download","catalog\\/filter","catalog\\/information","catalog\\/manufacturer","catalog\\/option","catalog\\/product","catalog\\/recurring","catalog\\/review","common\\/column_left","common\\/filemanager","common\\/menu","common\\/profile","common\\/stats","customer\\/custom_field","customer\\/customer","customer\\/customer_group","design\\/banner","design\\/layout","extension\\/analytics","extension\\/captcha","extension\\/feed","extension\\/fraud","extension\\/installer","extension\\/modification","extension\\/module","extension\\/openbay","extension\\/payment","extension\\/shipping","extension\\/total","feed\\/google_base","feed\\/google_sitemap","feed\\/openbaypro","fraud\\/fraudlabspro","fraud\\/ip","fraud\\/maxmind","localisation\\/country","localisation\\/currency","localisation\\/geo_zone","localisation\\/language","localisation\\/length_class","localisation\\/location","localisation\\/order_status","localisation\\/return_action","localisation\\/return_reason","localisation\\/return_status","localisation\\/stock_status","localisation\\/tax_class","localisation\\/tax_rate","localisation\\/weight_class","localisation\\/zone","marketing\\/affiliate","marketing\\/contact","marketing\\/coupon","marketing\\/marketing","module\\/account","module\\/affiliate","module\\/amazon_login","module\\/amazon_pay","module\\/banner","module\\/bestseller","module\\/carousel","module\\/category","module\\/ebay_listing","module\\/featured","module\\/filter","module\\/google_hangouts","module\\/html","module\\/information","module\\/latest","module\\/pp_button","module\\/pp_login","module\\/slideshow","module\\/special","module\\/store","openbay\\/amazon","openbay\\/amazon_listing","openbay\\/amazon_product","openbay\\/amazonus","openbay\\/amazonus_listing","openbay\\/amazonus_product","openbay\\/ebay","openbay\\/ebay_profile","openbay\\/ebay_template","openbay\\/etsy","openbay\\/etsy_product","openbay\\/etsy_shipping","openbay\\/etsy_shop","payment\\/amazon_login_pay","payment\\/authorizenet_aim","payment\\/authorizenet_sim","payment\\/bank_transfer","payment\\/bluepay_hosted","payment\\/bluepay_redirect","payment\\/cheque","payment\\/cod","payment\\/firstdata","payment\\/firstdata_remote","payment\\/free_checkout","payment\\/g2apay","payment\\/globalpay","payment\\/globalpay_remote","payment\\/klarna_account","payment\\/klarna_invoice","payment\\/liqpay","payment\\/nochex","payment\\/paymate","payment\\/paypoint","payment\\/payza","payment\\/perpetual_payments","payment\\/pp_express","payment\\/pp_payflow","payment\\/pp_payflow_iframe","payment\\/pp_pro","payment\\/pp_pro_iframe","payment\\/pp_standard","payment\\/realex","payment\\/realex_remote","payment\\/sagepay_direct","payment\\/sagepay_server","payment\\/sagepay_us","payment\\/securetrading_pp","payment\\/securetrading_ws","payment\\/skrill","payment\\/twocheckout","payment\\/web_payment_software","payment\\/worldpay","report\\/affiliate","report\\/affiliate_activity","report\\/affiliate_login","report\\/customer_activity","report\\/customer_credit","report\\/customer_login","report\\/customer_online","report\\/customer_order","report\\/customer_reward","report\\/marketing","report\\/product_purchased","report\\/product_viewed","report\\/sale_coupon","report\\/sale_order","report\\/sale_return","report\\/sale_shipping","report\\/sale_tax","sale\\/order","sale\\/recurring","sale\\/return","sale\\/voucher","sale\\/voucher_theme","setting\\/setting","setting\\/store","shipping\\/auspost","shipping\\/citylink","shipping\\/fedex","shipping\\/flat","shipping\\/free","shipping\\/item","shipping\\/parcelforce_48","shipping\\/pickup","shipping\\/royal_mail","shipping\\/ups","shipping\\/usps","shipping\\/weight","tool\\/backup","tool\\/error_log","tool\\/upload","total\\/coupon","total\\/credit","total\\/handling","total\\/klarna_fee","total\\/low_order_fee","total\\/reward","total\\/shipping","total\\/sub_total","total\\/tax","total\\/total","total\\/voucher","user\\/api","user\\/user","user\\/user_permission"]}'),
 (10, 'Demonstration', '');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_voucher`
+-- Table structure for table `bcit_voucher`
 --
 
-DROP TABLE IF EXISTS `oc_voucher`;
-CREATE TABLE `oc_voucher` (
+DROP TABLE IF EXISTS `bcit_voucher`;
+CREATE TABLE `bcit_voucher` (
   `voucher_id` int(11) NOT NULL AUTO_INCREMENT,
   `order_id` int(11) NOT NULL,
   `code` varchar(10) NOT NULL,
@@ -2667,11 +2667,11 @@ CREATE TABLE `oc_voucher` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_voucher_history`
+-- Table structure for table `bcit_voucher_history`
 --
 
-DROP TABLE IF EXISTS `oc_voucher_history`;
-CREATE TABLE `oc_voucher_history` (
+DROP TABLE IF EXISTS `bcit_voucher_history`;
+CREATE TABLE `bcit_voucher_history` (
   `voucher_history_id` int(11) NOT NULL AUTO_INCREMENT,
   `voucher_id` int(11) NOT NULL,
   `order_id` int(11) NOT NULL,
@@ -2683,11 +2683,11 @@ CREATE TABLE `oc_voucher_history` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_voucher_theme`
+-- Table structure for table `bcit_voucher_theme`
 --
 
-DROP TABLE IF EXISTS `oc_voucher_theme`;
-CREATE TABLE `oc_voucher_theme` (
+DROP TABLE IF EXISTS `bcit_voucher_theme`;
+CREATE TABLE `bcit_voucher_theme` (
   `voucher_theme_id` int(11) NOT NULL AUTO_INCREMENT,
   `image` varchar(255) NOT NULL,
   PRIMARY KEY (`voucher_theme_id`)
@@ -2696,11 +2696,11 @@ CREATE TABLE `oc_voucher_theme` (
 
 
 --
--- Table structure for table `oc_voucher_theme_description`
+-- Table structure for table `bcit_voucher_theme_description`
 --
 
-DROP TABLE IF EXISTS `oc_voucher_theme_description`;
-CREATE TABLE `oc_voucher_theme_description` (
+DROP TABLE IF EXISTS `bcit_voucher_theme_description`;
+CREATE TABLE `bcit_voucher_theme_description` (
   `voucher_theme_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
   `name` varchar(32) NOT NULL,
@@ -2710,21 +2710,21 @@ CREATE TABLE `oc_voucher_theme_description` (
 
 
 --
--- Table structure for table `oc_weight_class`
+-- Table structure for table `bcit_weight_class`
 --
 
-DROP TABLE IF EXISTS `oc_weight_class`;
-CREATE TABLE `oc_weight_class` (
+DROP TABLE IF EXISTS `bcit_weight_class`;
+CREATE TABLE `bcit_weight_class` (
   `weight_class_id` int(11) NOT NULL AUTO_INCREMENT,
   `value` decimal(15,8) NOT NULL DEFAULT '0.00000000',
   PRIMARY KEY (`weight_class_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `oc_weight_class`
+-- Dumping data for table `bcit_weight_class`
 --
 
-INSERT INTO `oc_weight_class` (`weight_class_id`, `value`) VALUES
+INSERT INTO `bcit_weight_class` (`weight_class_id`, `value`) VALUES
 (1, '1.00000000'),
 (2, '1000.00000000'),
 (5, '2.20460000'),
@@ -2733,11 +2733,11 @@ INSERT INTO `oc_weight_class` (`weight_class_id`, `value`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_weight_class_description`
+-- Table structure for table `bcit_weight_class_description`
 --
 
-DROP TABLE IF EXISTS `oc_weight_class_description`;
-CREATE TABLE `oc_weight_class_description` (
+DROP TABLE IF EXISTS `bcit_weight_class_description`;
+CREATE TABLE `bcit_weight_class_description` (
   `weight_class_id` int(11) NOT NULL AUTO_INCREMENT,
   `language_id` int(11) NOT NULL,
   `title` varchar(32) NOT NULL,
@@ -2746,10 +2746,10 @@ CREATE TABLE `oc_weight_class_description` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `oc_weight_class_description`
+-- Dumping data for table `bcit_weight_class_description`
 --
 
-INSERT INTO `oc_weight_class_description` (`weight_class_id`, `language_id`, `title`, `unit`) VALUES
+INSERT INTO `bcit_weight_class_description` (`weight_class_id`, `language_id`, `title`, `unit`) VALUES
 (1, 1, 'Kilogram', 'kg'),
 (2, 1, 'Gram', 'g'),
 (5, 1, 'Pound ', 'lb'),
@@ -2758,11 +2758,11 @@ INSERT INTO `oc_weight_class_description` (`weight_class_id`, `language_id`, `ti
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_zone`
+-- Table structure for table `bcit_zone`
 --
 
-DROP TABLE IF EXISTS `oc_zone`;
-CREATE TABLE `oc_zone` (
+DROP TABLE IF EXISTS `bcit_zone`;
+CREATE TABLE `bcit_zone` (
   `zone_id` int(11) NOT NULL AUTO_INCREMENT,
   `country_id` int(11) NOT NULL,
   `name` varchar(128) NOT NULL,
@@ -2772,10 +2772,10 @@ CREATE TABLE `oc_zone` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `oc_zone`
+-- Dumping data for table `bcit_zone`
 --
 
-INSERT INTO `oc_zone` (`zone_id`, `country_id`, `name`, `code`, `status`) VALUES
+INSERT INTO `bcit_zone` (`zone_id`, `country_id`, `name`, `code`, `status`) VALUES
 (1, 1, 'Badakhshan', 'BDS', 1),
 (2, 1, 'Badghis', 'BDG', 1),
 (3, 1, 'Baghlan', 'BGL', 1),
@@ -4270,7 +4270,7 @@ INSERT INTO `oc_zone` (`zone_id`, `country_id`, `name`, `code`, `status`) VALUES
 (1554, 101, 'Kohkiluyeh and Buyer Ahmad', 'KBA', 1),
 (1555, 101, 'Bushehr', 'BSH', 1),
 (1556, 101, 'Fars', 'FAR', 1);
-INSERT INTO `oc_zone` (`zone_id`, `country_id`, `name`, `code`, `status`) VALUES
+INSERT INTO `bcit_zone` (`zone_id`, `country_id`, `name`, `code`, `status`) VALUES
 (1557, 101, 'Hormozgan', 'HRM', 1),
 (1558, 101, 'Sistan and Baluchistan', 'SBL', 1),
 (1559, 101, 'Kerman', 'KRB', 1),
@@ -5772,7 +5772,7 @@ INSERT INTO `oc_zone` (`zone_id`, `country_id`, `name`, `code`, `status`) VALUES
 (3090, 203, 'V&auml;rmland', 'S', 1),
 (3091, 203, 'V&auml;sterbotten', 'AC', 1),
 (3092, 203, 'V&auml;sternorrland', 'Y', 1);
-INSERT INTO `oc_zone` (`zone_id`, `country_id`, `name`, `code`, `status`) VALUES
+INSERT INTO `bcit_zone` (`zone_id`, `country_id`, `name`, `code`, `status`) VALUES
 (3093, 203, 'V&auml;stmanland', 'U', 1),
 (3094, 203, 'V&auml;stra G&ouml;taland', 'O', 1),
 (3095, 204, 'Aargau', 'AG', 1),
@@ -6888,11 +6888,11 @@ INSERT INTO `oc_zone` (`zone_id`, `country_id`, `name`, `code`, `status`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_zone_to_geo_zone`
+-- Table structure for table `bcit_zone_to_geo_zone`
 --
 
-DROP TABLE IF EXISTS `oc_zone_to_geo_zone`;
-CREATE TABLE `oc_zone_to_geo_zone` (
+DROP TABLE IF EXISTS `bcit_zone_to_geo_zone`;
+CREATE TABLE `bcit_zone_to_geo_zone` (
   `zone_to_geo_zone_id` int(11) NOT NULL AUTO_INCREMENT,
   `country_id` int(11) NOT NULL,
   `zone_id` int(11) NOT NULL DEFAULT '0',
@@ -6903,10 +6903,10 @@ CREATE TABLE `oc_zone_to_geo_zone` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `oc_zone_to_geo_zone`
+-- Dumping data for table `bcit_zone_to_geo_zone`
 --
 
-INSERT INTO `oc_zone_to_geo_zone` (`zone_to_geo_zone_id`, `country_id`, `zone_id`, `geo_zone_id`, `date_added`, `date_modified`) VALUES
+INSERT INTO `bcit_zone_to_geo_zone` (`zone_to_geo_zone_id`, `country_id`, `zone_id`, `geo_zone_id`, `date_added`, `date_modified`) VALUES
 (1, 222, 0, 4, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (2, 222, 3513, 3, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (3, 222, 3514, 3, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
@@ -7019,7 +7019,7 @@ INSERT INTO `oc_zone_to_geo_zone` (`zone_to_geo_zone_id`, `country_id`, `zone_id
 
 
 
-CREATE TABLE IF NOT EXISTS `oc_feel` (
+CREATE TABLE IF NOT EXISTS `bcit_feel` (
   `feel_id` int(11) NOT NULL AUTO_INCREMENT,
   `image` varchar(255) DEFAULT NULL,
   `date_added` datetime NOT NULL,
@@ -7030,10 +7030,10 @@ CREATE TABLE IF NOT EXISTS `oc_feel` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_feel_description`
+-- Table structure for table `bcit_feel_description`
 --
 
-CREATE TABLE IF NOT EXISTS `oc_feel_description` (
+CREATE TABLE IF NOT EXISTS `bcit_feel_description` (
   `feel_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
   `name` varchar(64) NOT NULL,
@@ -7045,10 +7045,10 @@ CREATE TABLE IF NOT EXISTS `oc_feel_description` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_ncategory`
+-- Table structure for table `bcit_ncategory`
 --
 
-CREATE TABLE IF NOT EXISTS `oc_ncategory` (
+CREATE TABLE IF NOT EXISTS `bcit_ncategory` (
   `ncategory_id` int(11) NOT NULL AUTO_INCREMENT,
   `image` varchar(255) DEFAULT NULL,
   `parent_id` int(11) NOT NULL DEFAULT '0',
@@ -7065,10 +7065,10 @@ CREATE TABLE IF NOT EXISTS `oc_ncategory` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_ncategory_description`
+-- Table structure for table `bcit_ncategory_description`
 --
 
-CREATE TABLE IF NOT EXISTS `oc_ncategory_description` (
+CREATE TABLE IF NOT EXISTS `bcit_ncategory_description` (
   `ncategory_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
@@ -7083,10 +7083,10 @@ CREATE TABLE IF NOT EXISTS `oc_ncategory_description` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_ncategory_filter`
+-- Table structure for table `bcit_ncategory_filter`
 --
 
-CREATE TABLE IF NOT EXISTS `oc_ncategory_filter` (
+CREATE TABLE IF NOT EXISTS `bcit_ncategory_filter` (
   `ncategory_id` int(11) NOT NULL,
   `filter_id` int(11) NOT NULL,
   PRIMARY KEY (`ncategory_id`,`filter_id`)
@@ -7095,10 +7095,10 @@ CREATE TABLE IF NOT EXISTS `oc_ncategory_filter` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_ncategory_path`
+-- Table structure for table `bcit_ncategory_path`
 --
 
-CREATE TABLE IF NOT EXISTS `oc_ncategory_path` (
+CREATE TABLE IF NOT EXISTS `bcit_ncategory_path` (
   `ncategory_id` int(11) NOT NULL,
   `path_id` int(11) NOT NULL,
   `level` int(11) NOT NULL,
@@ -7108,10 +7108,10 @@ CREATE TABLE IF NOT EXISTS `oc_ncategory_path` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_ncategory_to_layout`
+-- Table structure for table `bcit_ncategory_to_layout`
 --
 
-CREATE TABLE IF NOT EXISTS `oc_ncategory_to_layout` (
+CREATE TABLE IF NOT EXISTS `bcit_ncategory_to_layout` (
   `ncategory_id` int(11) NOT NULL,
   `store_id` int(11) NOT NULL,
   `layout_id` int(11) NOT NULL,
@@ -7121,10 +7121,10 @@ CREATE TABLE IF NOT EXISTS `oc_ncategory_to_layout` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_ncategory_to_store`
+-- Table structure for table `bcit_ncategory_to_store`
 --
 
-CREATE TABLE IF NOT EXISTS `oc_ncategory_to_store` (
+CREATE TABLE IF NOT EXISTS `bcit_ncategory_to_store` (
   `ncategory_id` int(11) NOT NULL,
   `store_id` int(11) NOT NULL,
   PRIMARY KEY (`ncategory_id`,`store_id`)
@@ -7133,10 +7133,10 @@ CREATE TABLE IF NOT EXISTS `oc_ncategory_to_store` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_news`
+-- Table structure for table `bcit_news`
 --
 
-CREATE TABLE IF NOT EXISTS `oc_news` (
+CREATE TABLE IF NOT EXISTS `bcit_news` (
   `news_id` int(11) NOT NULL AUTO_INCREMENT,
   `model` varchar(64) NOT NULL,
   `sku` varchar(64) NOT NULL,
@@ -7174,10 +7174,10 @@ CREATE TABLE IF NOT EXISTS `oc_news` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_news_attribute`
+-- Table structure for table `bcit_news_attribute`
 --
 
-CREATE TABLE IF NOT EXISTS `oc_news_attribute` (
+CREATE TABLE IF NOT EXISTS `bcit_news_attribute` (
   `news_id` int(11) NOT NULL,
   `attribute_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
@@ -7188,10 +7188,10 @@ CREATE TABLE IF NOT EXISTS `oc_news_attribute` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_news_description`
+-- Table structure for table `bcit_news_description`
 --
 
-CREATE TABLE IF NOT EXISTS `oc_news_description` (
+CREATE TABLE IF NOT EXISTS `bcit_news_description` (
   `news_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
@@ -7208,10 +7208,10 @@ CREATE TABLE IF NOT EXISTS `oc_news_description` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_news_discount`
+-- Table structure for table `bcit_news_discount`
 --
 
-CREATE TABLE IF NOT EXISTS `oc_news_discount` (
+CREATE TABLE IF NOT EXISTS `bcit_news_discount` (
   `news_discount_id` int(11) NOT NULL AUTO_INCREMENT,
   `news_id` int(11) NOT NULL,
   `customer_group_id` int(11) NOT NULL,
@@ -7227,10 +7227,10 @@ CREATE TABLE IF NOT EXISTS `oc_news_discount` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_news_filter`
+-- Table structure for table `bcit_news_filter`
 --
 
-CREATE TABLE IF NOT EXISTS `oc_news_filter` (
+CREATE TABLE IF NOT EXISTS `bcit_news_filter` (
   `news_id` int(11) NOT NULL,
   `filter_id` int(11) NOT NULL,
   PRIMARY KEY (`news_id`,`filter_id`)
@@ -7239,10 +7239,10 @@ CREATE TABLE IF NOT EXISTS `oc_news_filter` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_news_image`
+-- Table structure for table `bcit_news_image`
 --
 
-CREATE TABLE IF NOT EXISTS `oc_news_image` (
+CREATE TABLE IF NOT EXISTS `bcit_news_image` (
   `news_image_id` int(11) NOT NULL AUTO_INCREMENT,
   `news_id` int(11) NOT NULL,
   `image` varchar(255) DEFAULT NULL,
@@ -7254,10 +7254,10 @@ CREATE TABLE IF NOT EXISTS `oc_news_image` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_news_option`
+-- Table structure for table `bcit_news_option`
 --
 
-CREATE TABLE IF NOT EXISTS `oc_news_option` (
+CREATE TABLE IF NOT EXISTS `bcit_news_option` (
   `news_option_id` int(11) NOT NULL AUTO_INCREMENT,
   `news_id` int(11) NOT NULL,
   `option_id` int(11) NOT NULL,
@@ -7269,10 +7269,10 @@ CREATE TABLE IF NOT EXISTS `oc_news_option` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_news_option_value`
+-- Table structure for table `bcit_news_option_value`
 --
 
-CREATE TABLE IF NOT EXISTS `oc_news_option_value` (
+CREATE TABLE IF NOT EXISTS `bcit_news_option_value` (
   `news_option_value_id` int(11) NOT NULL AUTO_INCREMENT,
   `news_option_id` int(11) NOT NULL,
   `news_id` int(11) NOT NULL,
@@ -7292,10 +7292,10 @@ CREATE TABLE IF NOT EXISTS `oc_news_option_value` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_news_recurring`
+-- Table structure for table `bcit_news_recurring`
 --
 
-CREATE TABLE IF NOT EXISTS `oc_news_recurring` (
+CREATE TABLE IF NOT EXISTS `bcit_news_recurring` (
   `news_id` int(11) NOT NULL,
   `recurring_id` int(11) NOT NULL,
   `customer_group_id` int(11) NOT NULL,
@@ -7305,10 +7305,10 @@ CREATE TABLE IF NOT EXISTS `oc_news_recurring` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_news_related`
+-- Table structure for table `bcit_news_related`
 --
 
-CREATE TABLE IF NOT EXISTS `oc_news_related` (
+CREATE TABLE IF NOT EXISTS `bcit_news_related` (
   `news_id` int(11) NOT NULL,
   `related_id` int(11) NOT NULL,
   PRIMARY KEY (`news_id`,`related_id`)
@@ -7317,10 +7317,10 @@ CREATE TABLE IF NOT EXISTS `oc_news_related` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_news_review`
+-- Table structure for table `bcit_news_review`
 --
 
-CREATE TABLE IF NOT EXISTS `oc_news_review` (
+CREATE TABLE IF NOT EXISTS `bcit_news_review` (
   `review_id` int(11) NOT NULL AUTO_INCREMENT,
   `news_id` int(11) NOT NULL,
   `customer_id` int(11) NOT NULL,
@@ -7337,10 +7337,10 @@ CREATE TABLE IF NOT EXISTS `oc_news_review` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_news_reward`
+-- Table structure for table `bcit_news_reward`
 --
 
-CREATE TABLE IF NOT EXISTS `oc_news_reward` (
+CREATE TABLE IF NOT EXISTS `bcit_news_reward` (
   `news_reward_id` int(11) NOT NULL AUTO_INCREMENT,
   `news_id` int(11) NOT NULL DEFAULT '0',
   `customer_group_id` int(11) NOT NULL DEFAULT '0',
@@ -7351,10 +7351,10 @@ CREATE TABLE IF NOT EXISTS `oc_news_reward` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_news_special`
+-- Table structure for table `bcit_news_special`
 --
 
-CREATE TABLE IF NOT EXISTS `oc_news_special` (
+CREATE TABLE IF NOT EXISTS `bcit_news_special` (
   `news_special_id` int(11) NOT NULL AUTO_INCREMENT,
   `news_id` int(11) NOT NULL,
   `customer_group_id` int(11) NOT NULL,
@@ -7369,10 +7369,10 @@ CREATE TABLE IF NOT EXISTS `oc_news_special` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_news_to_download`
+-- Table structure for table `bcit_news_to_download`
 --
 
-CREATE TABLE IF NOT EXISTS `oc_news_to_download` (
+CREATE TABLE IF NOT EXISTS `bcit_news_to_download` (
   `news_id` int(11) NOT NULL,
   `download_id` int(11) NOT NULL,
   PRIMARY KEY (`news_id`,`download_id`)
@@ -7381,10 +7381,10 @@ CREATE TABLE IF NOT EXISTS `oc_news_to_download` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_news_to_layout`
+-- Table structure for table `bcit_news_to_layout`
 --
 
-CREATE TABLE IF NOT EXISTS `oc_news_to_layout` (
+CREATE TABLE IF NOT EXISTS `bcit_news_to_layout` (
   `news_id` int(11) NOT NULL,
   `store_id` int(11) NOT NULL,
   `layout_id` int(11) NOT NULL,
@@ -7394,10 +7394,10 @@ CREATE TABLE IF NOT EXISTS `oc_news_to_layout` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_news_to_ncategory`
+-- Table structure for table `bcit_news_to_ncategory`
 --
 
-CREATE TABLE IF NOT EXISTS `oc_news_to_ncategory` (
+CREATE TABLE IF NOT EXISTS `bcit_news_to_ncategory` (
   `news_id` int(11) NOT NULL,
   `ncategory_id` int(11) NOT NULL,
   PRIMARY KEY (`news_id`,`ncategory_id`),
@@ -7407,10 +7407,10 @@ CREATE TABLE IF NOT EXISTS `oc_news_to_ncategory` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_news_to_store`
+-- Table structure for table `bcit_news_to_store`
 --
 
-CREATE TABLE IF NOT EXISTS `oc_news_to_store` (
+CREATE TABLE IF NOT EXISTS `bcit_news_to_store` (
   `news_id` int(11) NOT NULL,
   `store_id` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`news_id`,`store_id`)
@@ -7419,10 +7419,10 @@ CREATE TABLE IF NOT EXISTS `oc_news_to_store` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_news_to_viewpdf`
+-- Table structure for table `bcit_news_to_viewpdf`
 --
 
-CREATE TABLE IF NOT EXISTS `oc_news_to_viewpdf` (
+CREATE TABLE IF NOT EXISTS `bcit_news_to_viewpdf` (
   `news_id` int(11) NOT NULL,
   `viewpdf_id` int(11) NOT NULL,
   PRIMARY KEY (`news_id`,`viewpdf_id`)
@@ -7431,10 +7431,10 @@ CREATE TABLE IF NOT EXISTS `oc_news_to_viewpdf` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_viewpdf`
+-- Table structure for table `bcit_viewpdf`
 --
 
-CREATE TABLE IF NOT EXISTS `oc_viewpdf` (
+CREATE TABLE IF NOT EXISTS `bcit_viewpdf` (
   `viewpdf_id` int(11) NOT NULL AUTO_INCREMENT,
   `filename` varchar(128) NOT NULL,
   `mask` varchar(128) NOT NULL,
@@ -7445,10 +7445,10 @@ CREATE TABLE IF NOT EXISTS `oc_viewpdf` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_viewpdf_description`
+-- Table structure for table `bcit_viewpdf_description`
 --
 
-CREATE TABLE IF NOT EXISTS `oc_viewpdf_description` (
+CREATE TABLE IF NOT EXISTS `bcit_viewpdf_description` (
   `viewpdf_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
   `name` varchar(64) NOT NULL,
